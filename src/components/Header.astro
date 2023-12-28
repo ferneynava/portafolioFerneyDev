@@ -1,0 +1,119 @@
+<header>
+    <div>
+        <a href="/">
+            <img src="/Logo.svg" alt="FerneyDev">
+        </a>
+        
+        <nav>
+            <ul class="Menu">
+                <li class="Menu_Item">
+                    <a class="Menu-Item_a" href="/Sobremi">Sobre mi</a>
+                </li>
+                <li class="Menu_Item">
+                    <a class="Menu-Item_a" href="/Portafolio">Portafolio</a>
+                </li>
+                <li>
+                    <a class="Menu-Item_Button" href="mailto:ferneynava@gmail.com">
+                        Contáctame
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<style>
+    header {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        right: 0px;
+        background: rgba(255, 255, 255, 0.01);
+        backdrop-filter: blur(10px);
+        box-shadow: rgba(0, 0, 0, 0.01) 0px 0px 10px;
+    }
+
+    div {
+        max-width: 1200px;
+        margin: 0px auto;
+        padding: 0px 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+    }
+
+    .Menu { 
+        display: flex;
+        gap: 2rem;
+        list-style: none;   
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    li{
+        font-size: 0.875rem;
+        letter-spacing: 0.05rem;
+    }
+ 
+    .Menu_Item a{
+        font-weight: 600;
+        font-size: inherit;
+        color: #FAFAFA;
+        text-decoration: none;
+        position: relative;
+    }
+
+    .Menu_Item a:hover{
+        color: #00A6FB;
+    }
+    
+    .Menu-Item_a::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #00A6FB;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.6s ease-out;
+    }
+
+    .Menu-Item_a:hover::after{
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    .Menu-Item_Button{
+        display: inline-flex;
+        font-weight: 600;
+        font-size: inherit;
+        background: #00A6FB;
+        padding: 0.5rem 2rem;
+        font-size: inherit;
+        color: #FAFAFA;
+        text-decoration: none;
+        border-radius: 3rem;
+        letter-spacing: 0.05rem;
+        transition: 0.5s;
+        transition-property: box-shadow;
+    }
+
+    .Menu-Item_Button{
+        box-shadow: 0 0 25px rgb(0,140,255);
+    }
+
+    .Menu-Item_Button:hover{
+        box-shadow: 0 0 5px rgb(0,140,255),
+                0 0 25px rgb(0,140,255),
+                0 0 50px rgb(0,140,255),
+                0 0 100px rgb(0,140,255);
+    }
+
+    
+
+
+</style>

@@ -1,4 +1,6 @@
 ---
+import "@fontsource-variable/onest";
+import Header from "../components/Header.astro";
 interface Props {
 	title: string;
 }
@@ -17,35 +19,28 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<Header />
 		<slot />
 	</body>
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+	* {
+		font-family: "Onest Variable", system-ui, sans-serif;
+		box-sizing: border-box;
+		
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+
+	body {
+		background: #0C151D;
+		margin: 0px;
+		padding: 0px;
+		overflow-x: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100vh;
 	}
 </style>
