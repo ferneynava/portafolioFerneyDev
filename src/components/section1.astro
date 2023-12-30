@@ -1,0 +1,215 @@
+---
+const {color} = Astro.props
+---
+
+<section>
+	<div class="container">
+		<div class="containerLeft">
+			<div class="container-Presentacion">
+				<img src="/image 1784.png" alt="Hola">
+				<div class="container-Saludo">
+					<p>¡Hola! 
+						<span>me llamo,</span>
+					</p>
+					<h1>Ferney Nava</h1>
+				</div>
+			</div>
+			<h2 class="container-Profesion">
+					<span class="typed"></span>
+			</h2>
+			<nav>
+				<ul  class="menu-Social">
+					<li>
+						<a href="https://www.linkedin.com/in/ferney-alexander-nava-trujillo-0478a8118/">
+							<img src="/LinkedIn.svg" alt="">
+								LinkedIn
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/ferneynava">
+							<img src="/GitHub.svg" alt="">
+								GitHub
+						</a>
+					</li>
+					<li>
+						<a href="mailto:ferneynava@gmail.com">
+							<img src="/Correo.svg" alt="">
+								ferneynava@gmail.com
+						</a>
+					</li>
+			</nav>
+		</div>
+		<div class="containerRight">
+			<img src="FotoFull.png" alt="Foto FerneynavaDev">
+		</div>
+		<div class="container-Flecha">
+			<button class="container-Flecha_button">
+				<img src="Flecha.svg" alt="Flecha abajo">
+			</button>
+		</div>
+	</div>
+    
+</section>
+
+<style define:vars={{color}}>
+
+	section{
+		height: 100vh;
+		display: flex;
+		align-items: center;
+	}
+	
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(500px, 1fr));
+		align-items: center;
+		row-gap: 9rem;
+	}
+	
+	.containerLeft{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}	
+
+	.container-Presentacion{
+		display: flex;
+		padding: 1.75rem;
+		justify-content: center;
+		align-items: center;
+		background: rgba(108, 117, 125, 0.55);
+		border-radius: 16px;
+		border: 2px solid white;
+		backdrop-filter: blur(20px);
+		flex-wrap: wrap;
+	}
+
+	.container-Saludo p{
+		font-size: 2.125rem;
+		line-height: 2.563rem;
+		font-weight: 500;
+		color: white;
+		margin: 0;
+	}
+
+	.container-Saludo span{
+		color: var(--color);
+	}
+
+	.container-Saludo h1{
+		color: var(--color);
+		font-size: 3.125rem;
+		font-weight: 900;
+		line-height: 4.875rem;
+		margin: 0;
+	}
+
+	.container-Profesion{
+		color: var(--color);
+		text-align: center;
+		font-size: 2.0625rem;
+		font-weight: 900;
+		line-height: 2.5rem;
+	}
+
+	.menu-Social{
+		display: flex;
+		gap: 1rem;
+		list-style: none;
+		letter-spacing: 0.05rem;
+		padding: 0;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	} 
+
+	.menu-Social a{
+		display: flex;
+		padding: 0.5rem 1rem;
+		color: white;
+		font-size: 1rem;
+		line-height: 1.5rem;
+		text-decoration: none;
+		border-radius:  3.125rem;
+		background:  var(--color);
+		align-items: center;
+		gap: 0.4375rem;
+	}
+
+	.menu-Social a {
+		box-shadow: 0 0 25px rgb(0,140,255);
+	}
+
+	.menu-Social a:hover{
+		box-shadow: 0 0 5px rgb(0,140,255),
+                0 0 25px rgb(0,140,255),
+                0 0 50px rgb(0,140,255),
+                0 0 100px rgb(0,140,255);
+	}
+
+	.containerRight{
+		display: flex;
+		justify-content: center;
+	}
+
+	.container-Flecha{
+		display: flex;
+		justify-content: center;
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+
+	.container-Flecha_button{	
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: transparent;
+		border: none;
+		border-radius: 50%;
+		cursor: pointer;
+		height: 3.3rem;
+		width: 3.3rem;
+	}
+
+	.container-Flecha_button{
+		box-shadow: 0 0 25px rgb(0,140,255);
+	}
+
+	.container-Flecha_button:hover{
+		box-shadow: 0 0 5px rgb(0,140,255),
+                0 0 25px rgb(0,140,255),
+                0 0 50px rgb(0,140,255),
+                0 0 100px rgb(0,140,255);
+	}
+
+	.container-Flecha_button img{
+		width: 4rem;
+		height: 4rem;
+	}
+
+	.container-Flecha p{
+		color: white;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 16px;
+		letter-spacing: 0.17rem;
+	}
+
+</style>
+
+<script>
+	import Typed from 'typed.js'; 
+	
+
+		const typed = new Typed('.typed',{
+			strings: ["Licenciado en electrónica","Desarrollador Front-end"],
+			typeSpeed: 80,
+			loop: true,
+		});
+
+
+</script>

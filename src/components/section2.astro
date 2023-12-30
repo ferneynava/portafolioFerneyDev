@@ -1,0 +1,28 @@
+---
+const {id, color} = Astro.props
+---
+
+<section id={id}>
+    <div class="container">
+ff
+    </div>
+</section>
+
+<style>
+    section {
+        height: 100vh;
+		display: flex;
+		align-items: center;
+    }
+
+    .container {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(500px, 1fr));
+		align-items: center;
+		row-gap: 9rem;
+        background-color: aqua;
+	}
+	
+</style>
