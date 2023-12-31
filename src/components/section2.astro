@@ -31,9 +31,49 @@ const {id, color} = Astro.props
 					Me gusta estar en constante aprendizaje, creo que siempre hay algo nuevo que aprender.
 				</p>
 			</div>
+			<div class = "containerRight-Estudios">
+				<ul>
+					<li>
+						<img src="" alt="Platzi">
+						<a href="">Curso de Figma: Técnicas Avanzadas de Diseño</>
+						<small>
+							- Platzi
+						</small>
+					</li>
+					<li>
+						<img src="" alt="Platzi">
+						<a href="">
+							Curso de Figma: Prototipado e Interfaces
+						</a>
+						<small>
+							- Platzi
+						</small>
+					</li>
+					<li>
+						<img src="" alt="Platzi">
+						<a href="">
+							Full Stack Developer con JavaScript
+						</a>
+						<small>
+							- Platzi
+						</small>
+					</li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
 			<div class = "containerRight-buttom">
-				<a href="">Escribeme</a>
-				<a href="">Descargar CV</a>
+				<a href="mailto:ferneynava@gmail.com">
+					<img src="/Correo.svg" alt="">
+					Contáctame
+				</a>
+				<a href="">
+					<img src="/file-download.svg" alt="">
+					Descargar CV
+				</a>
 			</div>
 		</div>
     </div>
@@ -108,12 +148,12 @@ const {id, color} = Astro.props
 		border-radius: 3rem;
 		transition: 0.5s;
         transition-property: box-shadow;
-		border: 1px solid white;
-		box-shadow: 0 0 5px rgb(255, 255, 255),
-                0 0 25px rgb(255, 255, 255),
-                0 0 50px rgb(255, 255, 255),
-                0 0 90px rgb(255, 255, 255);
+		box-shadow: 0 0 5px rgb(0,140,255),
+                0 0 25px rgb(0,140,255),
+                0 0 50px rgb(0,140,255),
+                0 0 100px rgb(0,140,255);
 	}
+
 	.menu-sobremi a:hover{
         color: white;
 		padding: 0.5rem 2rem;
@@ -121,11 +161,10 @@ const {id, color} = Astro.props
 		border-radius: 3rem;
 		transition: 0.5s;
         transition-property: box-shadow;
-		border: 1px solid white;
-		box-shadow: 0 0 5px rgb(255, 255, 255),
-                0 0 25px rgb(255, 255, 255),
-                0 0 50px rgb(255, 255, 255),
-                0 0 90px rgb(255, 255, 255);
+		box-shadow: 0 0 5px rgb(0,140,255),
+                0 0 25px rgb(0,140,255),
+                0 0 50px rgb(0,140,255),
+                0 0 100px rgb(0,140,255);
     }
 
 	.containerRight-Perfil{
@@ -133,15 +172,53 @@ const {id, color} = Astro.props
 		font-size: 1rem;
 		font-weight: 400;
 		line-height: 1.7rem;
+		display: none;
 	}
 
 	#resaltador{
 		font-weight: bold;
 	}
+
+	.containerRight-buttom{
+		display: flex;
+		gap: 1rem;
+		list-style: none;
+		letter-spacing: 0.05rem;
+		padding: 0;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.containerRight-buttom a{
+		display: flex;
+		padding: 0.5rem 1rem;
+		color: white;
+		font-size: 1rem;
+		line-height: 1.5rem;
+		text-decoration: none;
+		border-radius:  3.125rem;
+		background:  var(--color);
+		align-items: center;
+		gap: 0.4375rem;
+	}
+
+	.containerRight-buttom a {
+		box-shadow: 0 0 25px rgb(0,140,255);
+	}
+
+	.containerRight-buttom a:hover{
+		box-shadow: 0 0 5px rgb(0,140,255),
+                0 0 25px rgb(0,140,255),
+                0 0 50px rgb(0,140,255),
+                0 0 100px rgb(0,140,255);
+	}
+
 </style>
 
-<script>
-	import {annotate} from "rough-notation";
+<script type="module">
+	import {annotate} from "https://unpkg.com/rough-notation?module";
 	
 	const $hover  = document.querySelectorAll(".hover");
 	const $perfil = document.getElementById("perfil");
@@ -158,7 +235,7 @@ const {id, color} = Astro.props
 	const observerOption = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.4,
+        threshold: 0.5,
     }
 
 	const obserserver = new IntersectionObserver(function(entries){
