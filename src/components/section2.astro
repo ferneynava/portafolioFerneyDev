@@ -2,13 +2,44 @@
 const {id, color} = Astro.props
 ---
 
-<section id={id}>
+<section id={id} class="Sobremi">
     <div class="container">
-ff
+		<div class="containerLeft">
+			<img src="FotoSobremi.webp" alt="Ferney Nava">
+		</div>
+		<div class="containerRight">
+			<h2>Sobre mi.</h2>
+			<nav>
+				<ul  class="menu-sobremi">
+					<li>
+						<a id="perfil" class="menu-sobremi_perfil" href="#sobre-mi">Perfil</a>
+					</li>
+					<li>
+						<a class="hover" href="#sobre-mi">Estudios</a>
+					</li>
+					<li>
+						<a class="hover" href="#sobre-mi">Skills</a>
+					</li>
+				</ul>
+			</nav>
+			<div class = "containerRight-Perfil">
+				<p>
+					<span id="resaltador">Licenciado en electrónica y desarrollador de Software </span> con habilidades en Front-End, una amplia experiencia en los campos de la educación y la industria tecnológica desarrollando proyectos personales.
+					Además de mi rol como profesional en desarrollo de software, también me he desempeñado como educador en tecnología, informática, matemáticas y áreas afines. 
+				</p>
+				<p>
+					Me gusta estar en constante aprendizaje, creo que siempre hay algo nuevo que aprender.
+				</p>
+			</div>
+			<div class = "containerRight-buttom">
+				<a href="">Escribeme</a>
+				<a href="">Descargar CV</a>
+			</div>
+		</div>
     </div>
 </section>
 
-<style>
+<style define:vars={{color}}>
     section {
         height: 100vh;
 		display: flex;
@@ -21,8 +52,132 @@ ff
 		display: grid;
 		grid-template-columns: repeat(2, minmax(500px, 1fr));
 		align-items: center;
-		row-gap: 9rem;
-        background-color: aqua;
+		gap: 4.375rem;
 	}
 	
+	.containerLeft {
+		display: flex;
+		justify-content: center;
+	}
+
+	.containerLeft img {
+		width: 100%;
+		height: auto;
+		object-fit: contain;
+	}
+
+	.containerRight {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 1.875rem;
+	}
+
+	.containerRight h2{
+		color: var(--color);
+		font-size: 5rem;
+		font-weight: 700;
+		line-height: 6.3125rem;
+		margin: 0;
+	}
+
+	.menu-sobremi{
+		display: flex;
+		list-style: none;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 2rem;
+		padding: 0;
+		margin: 0
+		
+	}
+
+	.menu-sobremi a{
+		letter-spacing: 0.05rem;
+		font-weight: 600;
+		font-size: 1.25rem;
+		color: white;
+		text-decoration: none;
+		padding: 0.5rem 2rem;
+	}
+
+	.menu-sobremi_perfil{
+		padding: 0.5rem 2rem;
+		background: #00A6FB;
+		border-radius: 3rem;
+		transition: 0.5s;
+        transition-property: box-shadow;
+		border: 1px solid white;
+		box-shadow: 0 0 5px rgb(255, 255, 255),
+                0 0 25px rgb(255, 255, 255),
+                0 0 50px rgb(255, 255, 255),
+                0 0 90px rgb(255, 255, 255);
+	}
+	.menu-sobremi a:hover{
+        color: white;
+		padding: 0.5rem 2rem;
+		background: #00A6FB;
+		border-radius: 3rem;
+		transition: 0.5s;
+        transition-property: box-shadow;
+		border: 1px solid white;
+		box-shadow: 0 0 5px rgb(255, 255, 255),
+                0 0 25px rgb(255, 255, 255),
+                0 0 50px rgb(255, 255, 255),
+                0 0 90px rgb(255, 255, 255);
+    }
+
+	.containerRight-Perfil{
+		color: white;
+		font-size: 1rem;
+		font-weight: 400;
+		line-height: 1.7rem;
+	}
+
+	#resaltador{
+		font-weight: bold;
+	}
 </style>
+
+<script>
+	import {annotate} from "rough-notation";
+	
+	const $hover  = document.querySelectorAll(".hover");
+	const $perfil = document.getElementById("perfil");
+	const $clickSobremi  = document.querySelector(".click");
+	const $subrayado = document.querySelector('#resaltador');
+	$clickSobremi.addEventListener("click", subrayado);
+	
+	$hover.forEach(Element => {
+		Element.addEventListener("mouseover", function (){
+			$perfil.classList.remove("menu-sobremi_perfil");
+		})
+	})
+
+	const observerOption = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.4,
+    }
+
+	const obserserver = new IntersectionObserver(function(entries){
+		entries.forEach(entry => {
+			if(entry.isIntersecting){
+				subrayado();
+			}
+		})
+	}, observerOption)
+
+	function subrayado(){
+		let subrayado = annotate($subrayado, { type: 'underline', color: "#00A6FB", strokeWidth: 3 ,padding: 2});
+		subrayado.show();
+		setTimeout(() => {
+			subrayado.remove();
+		}, 9000);
+	}
+
+	const $sobremi = document.querySelector(".Sobremi");
+	obserserver.observe($sobremi);
+</script>
+
