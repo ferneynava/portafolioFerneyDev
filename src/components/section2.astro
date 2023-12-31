@@ -15,10 +15,10 @@ const {id, color} = Astro.props
 						<a id="perfil" class="menu-sobremi_perfil" href="#sobre-mi">Perfil</a>
 					</li>
 					<li>
-						<a class="hover" href="#sobre-mi">Estudios</a>
+						<a class="hover estudios " href="#sobre-mi">Estudios</a>
 					</li>
 					<li>
-						<a class="hover" href="#sobre-mi">Skills</a>
+						<a class="hover Skills" href="#sobre-mi">Skills</a>
 					</li>
 				</ul>
 			</nav>
@@ -31,38 +31,95 @@ const {id, color} = Astro.props
 					Me gusta estar en constante aprendizaje, creo que siempre hay algo nuevo que aprender.
 				</p>
 			</div>
-			<div class = "containerRight-Estudios">
-				<ul>
+			<div class = "containerRight-Estudios inactive">
+				<ul class="listado-estudios">
 					<li>
-						<img src="" alt="Platzi">
-						<a href="">Curso de Figma: Técnicas Avanzadas de Diseño</>
-						<small>
-							- Platzi
-						</small>
+						<img src="Platzi.png" alt="Platzi">
+						<p>
+							<a href="https://platzi.com/p/ferneynava/curso/7998-figma-tecnicas-avanzadas/diploma/detalle/" target="_blank">Curso de Figma: Técnicas Avanzadas de Diseño
+							</a>
+							<small>
+								- Platzi
+							</small>
+						</p>
+						
 					</li>
 					<li>
-						<img src="" alt="Platzi">
-						<a href="">
-							Curso de Figma: Prototipado e Interfaces
-						</a>
-						<small>
-							- Platzi
-						</small>
+						<img src="Platzi.png" alt="Platzi">
+						<p>
+							<a href="https://platzi.com/p/ferneynava/curso/4038-figma-basico/diploma/detalle/" target="_blank">
+								Curso de Figma: Prototipado e Interfaces
+							</a>
+							<small>
+								- Platzi
+							</small>
+						</p>
 					</li>
 					<li>
-						<img src="" alt="Platzi">
-						<a href="">
-							Full Stack Developer con JavaScript
-						</a>
-						<small>
-							- Platzi
-						</small>
+						<img src="Platzi.png" alt="Platzi">
+						<p>
+								Full Stack Developer con JavaScript
+							<small>
+								- Platzi
+							</small>
+						</p>
+						
 					</li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>
+						<img src="Platzi.png" alt="Platzi">
+						<p>
+							<a href="https://platzi.com/p/ferneynava/curso/2477-frontend-developer-practico/diploma/detalle/" target="_blank">
+								Curso practico de Frontend Developer
+							</a>
+							<small>
+								- Platzi
+							</small>
+						</p>
+					</li>
+					<li>
+						<img src="Platzi.png" alt="Platzi">
+						<p>
+							<a href="https://platzi.com/p/ferneynava/curso/2467-frontend-developer/diploma/detalle/" target="_blank">
+								Curso de Frontend Developer
+							</a>
+							<small>
+								- Platzi
+							</small>
+						</p>
+
+					</li>
+					<li>
+						<img src="Platzi.png" alt="Platzi">
+						<p>
+							<a href="https://platzi.com/p/ferneynava/curso/1557-git-github/diploma/detalle/" target="_blank">
+								Curso profesional de Git y GitHub
+							</a>
+							<small>
+								- Platzi
+							</small>
+						</p>
+						
+					</li>
+					<li>
+						<img src="Platzi.png" alt="Platzi">
+						<p>
+							<a href="https://platzi.com/p/ferneynava/curso/2292-terminal/diploma/detalle/" target="_blank">
+								Curso de Introducción a la Terminal y Línea de Comandos
+							</a>
+							<small>
+								- Platzi
+							</small>
+						</p>
+					</li>
+					<li>
+						<img src="upn.png" alt="UPN">
+						<p>
+							Licenciatura en Electrónica
+							<small>
+								- Universidad Pedaógica Nacional
+							</small>
+						</p>
+					</li>
 				</ul>
 			</div>
 			<div class = "containerRight-buttom">
@@ -70,7 +127,7 @@ const {id, color} = Astro.props
 					<img src="/Correo.svg" alt="">
 					Contáctame
 				</a>
-				<a href="">
+				<a href="/public/CV Ferney Nava.pdf" target="_blank">
 					<img src="/file-download.svg" alt="">
 					Descargar CV
 				</a>
@@ -172,7 +229,6 @@ const {id, color} = Astro.props
 		font-size: 1rem;
 		font-weight: 400;
 		line-height: 1.7rem;
-		display: none;
 	}
 
 	#resaltador{
@@ -215,6 +271,56 @@ const {id, color} = Astro.props
                 0 0 100px rgb(0,140,255);
 	}
 
+
+	.inactive {
+		display: none;
+	}
+
+	.listado-estudios {
+
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+		gap: 1rem;
+		padding: 0;
+		margin-top: 10px;
+		color: white;
+	}
+
+	.listado-estudios p{
+		margin: 0;
+	}
+
+	.listado-estudios li{
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.listado-estudios img{
+		width: 1.5rem;
+		height: auto;
+		object-fit: contain;
+	}
+
+	.listado-estudios a{
+		color: white;
+		text-decoration: none;
+		line-height: 1.7rem;
+	}
+
+	.listado-estudios a:hover{
+		color: var(--color);
+		text-decoration: underline;
+	}
+
+
+	.listado-estudios small{
+		font-size: 0.875rem;
+		font-weight: 400;
+		line-height: 1.7rem;
+	}
+
 </style>
 
 <script type="module">
@@ -222,10 +328,24 @@ const {id, color} = Astro.props
 	
 	const $hover  = document.querySelectorAll(".hover");
 	const $perfil = document.getElementById("perfil");
+	const $containerPerfil = document.querySelector(".containerRight-Perfil");
+	const $estudios = document.querySelector(".estudios");
+	const $containerEstudios = document.querySelector(".containerRight-Estudios")
 	const $clickSobremi  = document.querySelector(".click");
 	const $subrayado = document.querySelector('#resaltador');
 	$clickSobremi.addEventListener("click", subrayado);
-	
+
+	$perfil.addEventListener("click", function (){
+		$containerPerfil.classList.remove("inactive");
+		$containerEstudios.classList.add("inactive");
+		subrayado()
+	})
+
+	$estudios.addEventListener("click", function (){
+		$containerPerfil.classList.add("inactive");
+		$containerEstudios.classList.remove("inactive");
+	})
+
 	$hover.forEach(Element => {
 		Element.addEventListener("mouseover", function (){
 			$perfil.classList.remove("menu-sobremi_perfil");
@@ -238,7 +358,7 @@ const {id, color} = Astro.props
         threshold: 0.5,
     }
 
-	const obserserver = new IntersectionObserver(function(entries){
+	const obserserver = new IntersectionObserver((entries) => {
 		entries.forEach(entry => {
 			if(entry.isIntersecting){
 				subrayado();
@@ -246,15 +366,16 @@ const {id, color} = Astro.props
 		})
 	}, observerOption)
 
+	const $sobremi = document.querySelector(".Sobremi");
+	obserserver.observe($sobremi);
+
 	function subrayado(){
 		let subrayado = annotate($subrayado, { type: 'underline', color: "#00A6FB", strokeWidth: 3 ,padding: 2});
 		subrayado.show();
 		setTimeout(() => {
 			subrayado.remove();
-		}, 9000);
+		}, 8000);
 	}
 
-	const $sobremi = document.querySelector(".Sobremi");
-	obserserver.observe($sobremi);
 </script>
 
