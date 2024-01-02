@@ -20,20 +20,20 @@ const {color} = Astro.props
 			<nav>
 				<ul  class="menu-Social">
 					<li>
-						<a href="https://www.linkedin.com/in/ferney-alexander-nava-trujillo-0478a8118/">
-							<img src="/LinkedIn.svg" alt="">
+						<a href="https://www.linkedin.com/in/ferney-alexander-nava-trujillo-0478a8118/"  target="_blank">
+							<img src="/public/Logo/LinkedIn.svg" alt="LinkedIn">
 								LinkedIn
 						</a>
 					</li>
 					<li>
-						<a href="https://github.com/ferneynava">
-							<img src="/GitHub.svg" alt="">
+						<a href="https://github.com/ferneynava"  target="_blank">
+							<img src="/public/Logo/GitHub.svg" alt="GitHub">
 								GitHub
 						</a>
 					</li>
 					<li>
 						<a href="mailto:ferneynava@gmail.com">
-							<img src="/Correo.svg" alt="">
+							<img src="/public/Logo/Correo.svg" alt="ferneynava@gmail.com">
 								ferneynava@gmail.com
 						</a>
 					</li>
@@ -43,9 +43,9 @@ const {color} = Astro.props
 			<img src="FotoFull.webp" alt="Foto FerneynavaDev">
 		</div>
 		<div class="container-Flecha">
-			<button class="container-Flecha_button">
+			<a class="container-Flecha_button" href="#sobre-mi">
 				<img src="Flecha.svg" alt="Flecha abajo">
-			</button>
+			</a >
 		</div>
 	</div>
     
@@ -71,14 +71,12 @@ const {color} = Astro.props
 	.containerLeft{
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		align-items: center;
 	}	
 
 	.container-Presentacion{
 		display: flex;
 		padding: 1.75rem;
-		justify-content: center;
 		align-items: center;
 		background: rgba(108, 117, 125, 0.55);
 		border-radius: 16px;
@@ -109,6 +107,7 @@ const {color} = Astro.props
 
 	.container-Profesion{
 		color: var(--color);
+		height: auto;
 		text-align: center;
 		font-size: 2.0625rem;
 		font-weight: 900;

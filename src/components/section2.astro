@@ -34,7 +34,7 @@ const {id, color} = Astro.props
 			<div class = "containerRight-Estudios inactive">
 				<ul class="listado-estudios">
 					<li>
-						<img src="Platzi.png" alt="Platzi">
+						<img src="/public/Logo/Platzi.png" alt="Platzi">
 						<p>
 							<a href="https://platzi.com/p/ferneynava/curso/7998-figma-tecnicas-avanzadas/diploma/detalle/" target="_blank">Curso de Figma: Técnicas Avanzadas de Diseño
 							</a>
@@ -45,7 +45,7 @@ const {id, color} = Astro.props
 						
 					</li>
 					<li>
-						<img src="Platzi.png" alt="Platzi">
+						<img src="/public/Logo/Platzi.png" alt="Platzi">
 						<p>
 							<a href="https://platzi.com/p/ferneynava/curso/4038-figma-basico/diploma/detalle/" target="_blank">
 								Curso de Figma: Prototipado e Interfaces
@@ -56,7 +56,7 @@ const {id, color} = Astro.props
 						</p>
 					</li>
 					<li>
-						<img src="Platzi.png" alt="Platzi">
+						<img src="/public/Logo/Platzi.png" alt="Platzi">
 						<p>
 								Full Stack Developer con JavaScript
 							<small>
@@ -66,7 +66,7 @@ const {id, color} = Astro.props
 						
 					</li>
 					<li>
-						<img src="Platzi.png" alt="Platzi">
+						<img src="/public/Logo/Platzi.png" alt="Platzi">
 						<p>
 							<a href="https://platzi.com/p/ferneynava/curso/2477-frontend-developer-practico/diploma/detalle/" target="_blank">
 								Curso practico de Frontend Developer
@@ -77,7 +77,7 @@ const {id, color} = Astro.props
 						</p>
 					</li>
 					<li>
-						<img src="Platzi.png" alt="Platzi">
+						<img src="/public/Logo/Platzi.png" alt="Platzi">
 						<p>
 							<a href="https://platzi.com/p/ferneynava/curso/2467-frontend-developer/diploma/detalle/" target="_blank">
 								Curso de Frontend Developer
@@ -89,7 +89,7 @@ const {id, color} = Astro.props
 
 					</li>
 					<li>
-						<img src="Platzi.png" alt="Platzi">
+						<img src="/public/Logo/Platzi.png" alt="Platzi">
 						<p>
 							<a href="https://platzi.com/p/ferneynava/curso/1557-git-github/diploma/detalle/" target="_blank">
 								Curso profesional de Git y GitHub
@@ -101,7 +101,7 @@ const {id, color} = Astro.props
 						
 					</li>
 					<li>
-						<img src="Platzi.png" alt="Platzi">
+						<img src="/public/Logo/Platzi.png" alt="Platzi">
 						<p>
 							<a href="https://platzi.com/p/ferneynava/curso/2292-terminal/diploma/detalle/" target="_blank">
 								Curso de Introducción a la Terminal y Línea de Comandos
@@ -112,7 +112,7 @@ const {id, color} = Astro.props
 						</p>
 					</li>
 					<li>
-						<img src="upn.png" alt="UPN">
+						<img src="/public/Logo/upn.png" alt="UPN">
 						<p>
 							Licenciatura en Electrónica
 							<small>
@@ -122,9 +122,52 @@ const {id, color} = Astro.props
 					</li>
 				</ul>
 			</div>
+
+			<div class = "containerRight-Skills inactive">
+				<article class="containerRight-Skills_hover">
+					<h2>JavaScript</h2>
+					<img src="/public/Logo/JavaScript.svg" alt="JavaScript">
+				</article>
+				<article class="containerRight-Skills_hover">
+					<h2>HTML</h2>
+					<img src="/public/Logo/HTML.svg" alt="HTML">
+				</article>
+				<article class="containerRight-Skills_hover">
+					<h2>CSS</h2>
+					<img src="/public/Logo/CSS.svg" alt="CSS">
+				</article>
+				<article class="containerRight-Skills_hover">
+					<h2>Figma</h2>
+					<img src="/public/Logo/Figma.svg" alt="Figma">
+				</article>
+				<article class="containerRight-Skills_hover">
+					<h2>Sass</h2>
+					<img src="/public/Logo/sass.svg" alt="sass">
+				</article>
+				<article class="containerRight-Skills_hover">
+					<h2>Git</h2>
+					<img src="/public/Logo/git.svg" alt="git">
+				</article>
+				<article class="containerRight-Skills_hover">
+					<h2>GitHub</h2>
+					<img src="/public/Logo/GitHub.svg" alt="GitHub">
+				</article>
+				<article class="containerRight-Skills_hover">
+					<h2>Astro</h2>
+					<img src="/public/Logo/astro_dark.svg" alt="astro">
+				</article>
+				<article class="containerRight-Skills_hover">
+					<h2>Arduino</h2>
+					<img src="/public/Logo/Arduino_Logo.svg" alt="Arduino">	
+				</article>
+				<article class="containerRight-Skills_hover">
+					<h2>Unity</h2>
+					<img src="/public/Logo/unity_dark.svg" alt="unity">
+				</article>
+			</div>
 			<div class = "containerRight-buttom">
 				<a href="mailto:ferneynava@gmail.com">
-					<img src="/Correo.svg" alt="">
+					<img src="/public/Logo/Correo.svg" alt="">
 					Contáctame
 				</a>
 				<a href="/public/CV Ferney Nava.pdf" target="_blank">
@@ -201,7 +244,7 @@ const {id, color} = Astro.props
 
 	.menu-sobremi_perfil{
 		padding: 0.5rem 2rem;
-		background: #00A6FB;
+		background: var(--color);
 		border-radius: 3rem;
 		transition: 0.5s;
         transition-property: box-shadow;
@@ -214,7 +257,7 @@ const {id, color} = Astro.props
 	.menu-sobremi a:hover{
         color: white;
 		padding: 0.5rem 2rem;
-		background: #00A6FB;
+		background: var(--color);
 		border-radius: 3rem;
 		transition: 0.5s;
         transition-property: box-shadow;
@@ -223,6 +266,19 @@ const {id, color} = Astro.props
                 0 0 50px rgb(0,140,255),
                 0 0 100px rgb(0,140,255);
     }
+
+	.click{
+		color: white;
+		padding: 0.5rem 2rem;
+		background: var(--color);
+		border-radius: 3rem;
+		transition: 0.5s;
+        transition-property: box-shadow;
+		box-shadow: 0 0 5px rgb(0,140,255),
+                0 0 25px rgb(0,140,255),
+                0 0 50px rgb(0,140,255),
+                0 0 100px rgb(0,140,255);
+	}
 
 	.containerRight-Perfil{
 		color: white;
@@ -270,7 +326,6 @@ const {id, color} = Astro.props
                 0 0 50px rgb(0,140,255),
                 0 0 100px rgb(0,140,255);
 	}
-
 
 	.inactive {
 		display: none;
@@ -321,6 +376,47 @@ const {id, color} = Astro.props
 		line-height: 1.7rem;
 	}
 
+	.containerRight-Skills{
+		height: auto;
+		width: 100%;
+		display: none;
+		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+		gap: 2rem;
+		padding: 0;
+		margin: 1rem 0;
+	}
+
+	article{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 1.3125rem;
+		align-items: center;
+		gap: 0.5rem;
+		background-color: #343A40;
+		border-radius: 0.625rem;
+	}
+
+	.containerRight-Skills h2{
+		font-size: 1rem;
+		line-height: 1.7rem;
+		font-weight: 700;
+		color: white;
+	}
+
+	.containerRight-Skills img {
+		width: 3.125rem;
+		height: 3.125rem;
+		object-fit: contain;
+	}
+
+	.containerRight-Skills_hover:hover{
+		box-shadow: 0 0 5px rgb(255, 255, 255),
+                0 0 25px rgb(255, 255, 255),
+                0 0 50px rgb(255, 255, 255),
+                0 0 15px rgb(255, 255, 255);
+		
+	}
 </style>
 
 <script type="module">
@@ -330,28 +426,16 @@ const {id, color} = Astro.props
 	const $perfil = document.getElementById("perfil");
 	const $containerPerfil = document.querySelector(".containerRight-Perfil");
 	const $estudios = document.querySelector(".estudios");
-	const $containerEstudios = document.querySelector(".containerRight-Estudios")
+	const $containerEstudios = document.querySelector(".containerRight-Estudios");
+	const $Skills = document.querySelector(".Skills");
+	const $containerSkills = document.querySelector(".containerRight-Skills");
 	const $clickSobremi  = document.querySelector(".click");
-	const $subrayado = document.querySelector('#resaltador');
+	const $subrayado = document.querySelector("#resaltador");
+	const $containerSkillsHover = document.querySelectorAll(".containerRight-Skills_hover");
+	const $menuSobremi = document.querySelector(".menu-sobremi a")
+
+
 	$clickSobremi.addEventListener("click", subrayado);
-
-	$perfil.addEventListener("click", function (){
-		$containerPerfil.classList.remove("inactive");
-		$containerEstudios.classList.add("inactive");
-		subrayado()
-	})
-
-	$estudios.addEventListener("click", function (){
-		$containerPerfil.classList.add("inactive");
-		$containerEstudios.classList.remove("inactive");
-	})
-
-	$hover.forEach(Element => {
-		Element.addEventListener("mouseover", function (){
-			$perfil.classList.remove("menu-sobremi_perfil");
-		})
-	})
-
 	const observerOption = {
         root: null,
         rootMargin: '0px',
@@ -368,6 +452,58 @@ const {id, color} = Astro.props
 
 	const $sobremi = document.querySelector(".Sobremi");
 	obserserver.observe($sobremi);
+
+	$perfil.addEventListener("click", function (){
+		$menuSobremi.classList.add("click");
+		$estudios.classList.remove("click");
+		$Skills.classList.remove("click");
+		$containerPerfil.classList.remove("inactive");
+		$containerEstudios.classList.add("inactive");
+		$containerSkills.classList.add("inactive");
+		$containerSkills.style.display = "none";
+		subrayado()
+	})
+
+	$estudios.addEventListener("click", function (){
+		$estudios.classList.add("click");
+		$menuSobremi.classList.remove("click");
+		$Skills.classList.remove("click");
+		$containerPerfil.classList.add("inactive");
+		$containerEstudios.classList.remove("inactive");
+		$containerSkills.classList.add("inactive");
+		$containerSkills.style.display = "none";
+	})
+
+	$Skills.addEventListener("click", function (){
+		$Skills.classList.add("click");
+		$menuSobremi.classList.remove("click");
+		$estudios.classList.remove("click");
+		$containerPerfil.classList.add("inactive");
+		$containerEstudios.classList.add("inactive");
+		$containerSkills.classList.remove("inactive");
+		$containerSkills.style.display = "grid";
+	})
+
+	$hover.forEach(Element => {
+		Element.addEventListener("mouseover", function (){
+			$perfil.classList.remove("menu-sobremi_perfil");
+		})
+	})
+
+	$containerSkillsHover.forEach(Element => {
+		const $imagen = Element.querySelectorAll("img");
+
+		Element.addEventListener("mouseover", function (){
+			$imagen.forEach(img => {
+				img.style.transform = "scale(1.2)";
+			})
+		})
+		Element.addEventListener("mouseout", function (){
+			$imagen.forEach(img => {
+				img.style.transform = "scale(1)";
+		});
+	})
+})
 
 	function subrayado(){
 		let subrayado = annotate($subrayado, { type: 'underline', color: "#00A6FB", strokeWidth: 3 ,padding: 2});
