@@ -63,7 +63,7 @@
                 {"src": "JavaScript.svg", "alt": "JavaScript", "texto": "JavaScript"},
                 {"src": "Google_Apps_Script.png", "alt": "Google Apps Script", "texto": "Google Apps Script"}
             ],
-            "descripcion": "Pagina web como herramienta de ayuda para los docentes del Colegio María Auxiliadora. Gracias a ella, los profesores pueden enviar y entregar informes finales de los periodos académicos de manera más rápida, sencilla y automatizada.",
+            "descripcion": "Página web como herramienta de ayuda para los docentes del Colegio María Auxiliadora. Gracias a ella, los profesores pueden enviar y entregar informes finales de los periodos académicos de manera más rápida, sencilla y automatizada.",
             "Demo": "#portafolio",
             "Código": "https://github.com/ferneynava/Calculadora-Informes-Finales.git"
         },
@@ -77,7 +77,7 @@
                 {"src": "react.svg", "alt": "React", "texto": "React"},
                 {"src": "Threejs-logo.svg", "alt": "Three.js", "texto": "Three.js"}
             ],
-            "descripcion": "Clon de Minecraft. Puedes moverte en el espacio 3D con una perspectiva de primera persona y crear bloques",
+            "descripcion": "Clon de Minecraft. Puedes moverte en el espacio 3D con una perspectiva de primera persona y crear bloques.",
             "Demo": "https://clon-minecraft.netlify.app/",
             "Código": "https://github.com/ferneynava/Clon-Minecraft"
         }
