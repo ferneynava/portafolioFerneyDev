@@ -1,12 +1,16 @@
 ---
 import "@fontsource-variable/onest";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Section1 from '../components/section1.astro';
+import Section2 from '../components/section2.astro';
 interface Props {
 	description: string;
 	title: string;
 }
 
 const {description, title} = Astro.props;
+const color = "#00A6FB";
 ---
 
 <!doctype html>
@@ -17,31 +21,305 @@ const {description, title} = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="" />
 		<meta name="generator" content={Astro.generator} />
+		<script defer type="module" src="script/Proyecto.js"> </script>
 		<title>{title}</title>
 	</head>
 	<body>
-		<Header />
-		<slot />
+		<Header color = {color} />
+        <main>
+            <Section1 color = {color}/>
+		    <Section2 id="sobre-mi" color = {color}/>
+            <section id="portafolio" class="Portafolio">
+                <div class="container-Primary">
+                    <h2>
+                        Portafolio
+                    </h2>
+                    <div class="container-Portafolio">
+                    </div>
+                </div>
+            </section>    
+        </main>
+        <Footer />
 	</body>
 </html>
 <style is:global>
-	:root {
-		
-	}
 	* {
 		font-family: "Onest Variable", system-ui, sans-serif;
 		box-sizing: border-box;
-		
 	}
 
 	body {
 		background: #0C151D;
 		margin: 0px;
 		padding: 0px;
-		overflow-x: hidden;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+	}
+
+    main{
+        width: 100%;
+        position: relative;
+    }
+
+    .container-Primary{
+		max-width: 1200px;
+		margin: 3rem auto;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		gap: 1.375rem;
 	}
+
+    .container-Primary h2 {
+        color:#00A6FB;
+        font-size: 5rem;
+		font-weight: 700;
+		line-height: 6.3125rem;
+		margin: 0;
+    }
+	
+    .container-Portafolio {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(500px, 1fr));
+        justify-content: center;
+        column-gap: 11rem;
+        row-gap: 4rem;
+        align-self: stretch;
+    }
+
+    .container-Portafolio_Tajeta{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        border-radius: 12px;
+        background-color: #212529;
+        box-shadow: 0 0 25px rgb(0,140,255);
+    }
+
+    .container-Portafolio_Tajeta:hover{
+        box-shadow: 0 0 5px rgb(0,140,255),
+                0 0 25px rgb(0,140,255),
+                0 0 50px rgb(0,140,255),
+                0 0 100px rgb(0,140,255);
+    }
+
+    .container-Portafolio_img {
+        height: 20.375rem;
+        border-radius: 12px 12px 0rem 0rem;
+        justify-content: flex-end;
+        align-items: center;
+        align-self: stretch;
+    }
+
+    .container-Portafolio_Descripcion {
+        display: flex;  
+        padding: 0rem 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        align-self: stretch;
+        
+    }	
+
+    .container-Portafolio_Descripcion h3 {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 900;
+        margin: 0;
+        padding: 1rem 0;
+        border-bottom: 1px solid #6C757D;
+        width: 100%;
+        letter-spacing: 0.05rem;
+    }	
+
+    .menu-tecnologias {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        letter-spacing: 0.05rem;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 1rem 0;
+		width: 100%;
+    }
+
+    .menu-tecnologias li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .menu-tecnologias p{
+        color: white;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.7rem;
+        margin: 0;
+    }
+
+    .menu-tecnologias img{
+        width: 2.625rem;
+        height: 2.625rem;
+        object-fit: contain;
+    }
+
+    .container-Portafolio_p{
+        color: white;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.7rem;
+        margin: 0;
+        padding: 1rem 0 0;
+		border-top: 1px solid #6C757D;
+    }
+
+    .container-Portafolio_Button{
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        letter-spacing: 0.05rem;    
+        padding: 1rem 0;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        border-top: 1px solid #6C757D;
+        width: 100%;
+    }
+
+    .container-Portafolio_Button a{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: white;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.7rem;
+        margin: 0;
+        padding: 0.5rem 1rem;
+        border-radius:  3.125rem;
+        text-decoration: none;
+        background:  #00A6FB;
+    }
+
+    .container-Portafolio_Button a{
+        box-shadow: 0 0 25px rgb(0,140,255);
+    }
+
+    .container-Portafolio_Button a:hover{
+        box-shadow: 0 0 5px rgb(0,140,255),
+                0 0 25px rgb(0,140,255),
+                0 0 50px rgb(0,140,255),
+                0 0 100px rgb(0,140,255);
+    }
+
+    @media (max-width: 960px) {
+        
+        .container-Portafolio {
+            grid-template-columns: repeat(1, minmax(500px, 1fr));
+            column-gap: 0rem;
+            row-gap: 4rem;
+            margin-left: 13rem;
+			margin-top: 1rem;
+        }
+
+        .container-Primary h2{
+            margin-top: 9rem;
+            margin-left: 2rem;
+        }
+
+        .container-Portafolio_Descripcion h3{
+            font-size: 2rem;
+        }
+
+        .menu-tecnologias p{
+            font-size: 1.5rem;
+        }
+
+        .container-Portafolio_p{
+            font-size: 1.5rem;
+        }
+
+        .container-Portafolio_Button a{
+            padding: 1rem 2rem;
+            font-size: 1.8rem;
+        }
+
+        .container-Portafolio_Button a img{
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+
+    @media (max-width: 800px) {
+
+        .container-Portafolio {
+            grid-template-columns: repeat(1, minmax(500px, 1fr));
+            margin-left: 3.3px;
+			margin-top: 1rem;
+        }
+
+        .container-Primary h2{
+            margin-top: 9rem;
+            margin-left: 2rem;
+        }
+
+        .container-Portafolio_Descripcion h3{
+            font-size: 2rem;
+        }
+
+        .menu-tecnologias p{
+            font-size: 1.5rem;
+        }
+
+        .container-Portafolio_p{
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+        }
+
+        .container-Portafolio_Button a{
+            padding: 1rem 2rem;
+            font-size: 1.8rem;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .container-Portafolio {
+            grid-template-columns: repeat(1, minmax(500px, 1fr));
+            margin-left: 13rem;
+			margin-top: 1rem;
+        }
+
+        .container-Portafolio_Descripcion h3{
+            font-size: 2rem;
+        }
+
+        .menu-tecnologias p{
+            font-size: 1.8rem;
+        }
+
+        .container-Portafolio_p{
+            font-size: 1.8rem;
+            line-height: 2.5rem;
+        }
+
+        .container-Portafolio_Button a{
+            padding: 1rem 2rem;
+            font-size: 1.8rem;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .container-Portafolio {
+            grid-template-columns: repeat(1, minmax(500px, 1fr));
+            margin-left: 23rem;
+			margin-top: 1rem;
+        }
+    }
 </style>
 

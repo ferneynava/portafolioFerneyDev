@@ -1,20 +1,23 @@
 ---
-import Section1 from "./section1.astro";
-
+const {color} = Astro.props
 ---
 
 <header>
-    <div>
+    <div class="Header">
         <a href="/">
-            <img src="/public/Logo/Logo.svg" alt="FerneyDev">
+            <img class="Logo" src="Logo.svg" alt="FerneyDev">
         </a>
         
-        <nav>
+        <a class="Menu-Movil" href="#" >
+            <img src="Menu.svg" alt="Menu">
+        </a>
+
+        <nav class="Menu-container">
             <ul class="Menu">
                 <li class="Menu_Item">
                     <a class="Menu-Item_a click" href="#sobre-mi" >Sobre mi</a>
                 </li>
-                <li class="Menu_Item">
+                <li class="Menu_Item Menu_Item-media">
                     <a class="Menu-Item_a" href="#portafolio">Portafolio</a>
                 </li>
                 <li>
@@ -25,14 +28,44 @@ import Section1 from "./section1.astro";
             </ul>
         </nav>
     </div>
+
+    <div class="MenuActive inactive">
+        <div class="Menu-iphone">
+            <a class="Menu-iphon_cerrar" href="#">
+                <svg stroke="currentColor" fill="#FAFAFA" stroke-width="0" viewBox="0 0 1024 1024" height="2.3rem" width="2.3rem" xmlns="http://www.w3.org/2000/svg"><path d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 0 0 203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"></path></svg>
+            </a>
+            
+            <nav>
+                <ul class="Menu_iphone-ul">
+                    <li>
+                        <b>MENÚ</b>
+                    </li>
+                    <li>
+                        <a class="Menu_iphone-a sobreMi" href="#sobre-mi"> 
+                            Sobre mi
+                        </a>
+                    </li>
+                    <li> 
+                        <a class="Menu_iphone-a Portafolio" href="#portafolio">
+                            Portafolio
+                        </a>
+                    </li>
+                    <li>
+                        <a class="Menu-Item_Button" href="mailto:ferneynava@gmail.com">
+                            Contáctame
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 </header>
 
-<style>
+<style define:vars={{color}}>
     header {
         position: fixed;
         top: 0px;
         left: 0px;
-        right: 0px;
         right: 0px;
         background: rgba(255, 255, 255, 0.01);
         backdrop-filter: blur(10px);
@@ -40,7 +73,7 @@ import Section1 from "./section1.astro";
         z-index: 1000;
     }
 
-    div {
+    .Header {
         max-width: 1200px;
         margin: 0px auto;
         display: flex;
@@ -49,27 +82,31 @@ import Section1 from "./section1.astro";
         height: 60px;
     }
 
+    .Menu-Movil{
+        display: none;
+    }
+
     .Menu { 
         display: flex;
         gap: 2rem;
         list-style: none;   
-        justify-content: flex-end;
         align-items: center;
     }
 
     li{
         letter-spacing: 0.05rem;
     }
+
     .Menu_Item a{
         font-weight: 600;
         font-size: inherit;
-        color: #FAFAFA;
+        color: white;
         text-decoration: none;
         position: relative;
     }
 
     .Menu_Item a:hover{
-        color: #00A6FB;
+        color: var(--color);
     }
     
     .Menu-Item_a::after{
@@ -79,7 +116,7 @@ import Section1 from "./section1.astro";
         height: 2px;
         bottom: 0;
         left: 0;
-        background-color: #00A6FB;
+        background-color: var(--color);B;
         transform: scaleX(0);
         transform-origin: bottom right;
         transition: transform 0.6s ease-out;
@@ -94,7 +131,7 @@ import Section1 from "./section1.astro";
         display: inline-flex;
         font-weight: 600;
         font-size: inherit;
-        background: #00A6FB;
+        background: var(--color);;
         padding: 0.5rem 2rem;
         font-size: inherit;
         color: #FAFAFA;
@@ -116,7 +153,121 @@ import Section1 from "./section1.astro";
                 0 0 100px rgb(0,140,255);
     }
 
-    
+    .inactive {
+        display: none;
+    }
+
+    .Menu-iphone{
+        background-color: #0C151D;
+        align-items: center;
+        inset: 0px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        border-radius: 0rem  0rem 0rem 50.5rem;
+    }
+
+    .Menu-iphone svg{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .Menu_iphone-ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    b{
+        color: white;
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: 0.05rem;
+        text-decoration: underline;
+    }
+
+    .Menu_iphone-a{
+        color: white;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: 0.05rem;
+        text-decoration: underline;
+        text-decoration-color: var(--color);;
+    }
+
+
+    @media (max-width: 960px){
+        .Menu-container{
+            display: none;
+        }
+        
+        .Menu-Movil{
+            display: block;
+        }
+
+        .Logo{
+            height: 20rem;
+            width: 20rem;
+        }
+
+        .Menu-Movil img{
+            height: 5rem;
+            width: 5rem;
+        }
+
+        .Header{
+            padding: 0px 3rem;
+            height: 100px;
+        }
+
+        .Menu-Item_Button{
+            font-weight: 600;
+            font-size: 2rem;
+            padding: 1rem 2rem;
+        }
+
+        .container-footer{
+            padding: 0px 9rem;
+        }
+    }
 
 
 </style>
+
+<script type="module">
+    const $menu = document.querySelector(".Menu-Movil");
+    const $menuActive = document.querySelector(".MenuActive");
+    const $menuCerrar = document.querySelector(".Menu-iphon_cerrar");
+    const $sobreMi = document.querySelector(".sobreMi");
+    const $portafolio = document.querySelector(".Portafolio");
+
+    $menu.addEventListener("click", activeMenu)
+    $menuCerrar.addEventListener("click", inactiveMenu)
+    $sobreMi.addEventListener("click", inactiveMenu)
+    $portafolio.addEventListener("click", inactiveMenu)
+
+    function activeMenu(){
+        let inactiveMenu = $menuActive.classList.contains("inactive");
+        if(inactiveMenu){
+            $menuActive.classList.remove("inactive");
+        }
+    }
+
+    function inactiveMenu(){
+        let inactiveMenu = $menuActive.classList.contains("inactive");
+        if(!inactiveMenu){
+            $menuActive.classList.add("inactive");
+        }
+    }
+
+</script>

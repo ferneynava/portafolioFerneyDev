@@ -2,11 +2,11 @@
 const {color} = Astro.props
 ---
 
-<section>
-	<div class="container">
+<section class="section-principal">
+	<div class="container-principal">
 		<div class="containerLeft">
 			<div class="container-Presentacion">
-				<img src="/image 1784.webp" alt="Hola">
+				<img src="image 1784.webp" alt="Hola">
 				<div class="container-Saludo">
 					<p>¡Hola! 
 						<span>me llamo,</span>
@@ -18,22 +18,22 @@ const {color} = Astro.props
 					<span class="typed"></span>
 			</h2>
 			<nav>
-				<ul  class="menu-Social">
+				<ul class="menu-Social">
 					<li>
 						<a href="https://www.linkedin.com/in/ferney-alexander-nava-trujillo-0478a8118/"  target="_blank">
-							<img src="/public/Logo/LinkedIn.svg" alt="LinkedIn">
+							<img src="LinkedIn.svg" alt="LinkedIn">
 								LinkedIn
 						</a>
 					</li>
 					<li>
 						<a href="https://github.com/ferneynava"  target="_blank">
-							<img src="/public/Logo/GitHub.svg" alt="GitHub">
+							<img src="GitHub.svg" alt="GitHub">
 								GitHub
 						</a>
 					</li>
 					<li>
 						<a href="mailto:ferneynava@gmail.com">
-							<img src="/public/Logo/Correo.svg" alt="ferneynava@gmail.com">
+							<img src="Correo.svg" alt="ferneynava@gmail.com">
 								ferneynava@gmail.com
 						</a>
 					</li>
@@ -41,37 +41,39 @@ const {color} = Astro.props
 		</div>
 		<div class="containerRight">
 			<img src="FotoFull.webp" alt="Foto FerneynavaDev">
-		</div>
-		<div class="container-Flecha">
-			<a class="container-Flecha_button" href="#sobre-mi">
-				<img src="Flecha.svg" alt="Flecha abajo">
-			</a >
-		</div>
+		</div>	
 	</div>
-    
+    <div class="container-Flecha">
+		<a class="container-Flecha_button" href="#sobre-mi">
+			<img src="Flecha.svg" alt="Flecha abajo">
+		</a >
+	</div>
 </section>
 
 <style define:vars={{color}}>
 
-	section{
-		height: 100vh;
+	.section-principal{
+		min-height: 100vh;
 		display: flex;
 		align-items: center;
+		align-content: center;
+		flex-direction: column;
+		gap: 10rem;
+		margin: 115px auto 0px;
 	}
 	
-	.container {
-		max-width: 1200px;
-		margin: 0 auto;
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+	.container-principal {
+		display: flex;
+		flex-direction: row-reverse;
 		align-items: center;
-		row-gap: 9rem;
+		gap: 5.5rem;
 	}
 	
 	.containerLeft{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		gap: 1rem;
 	}	
 
 	.container-Presentacion{
@@ -107,7 +109,7 @@ const {color} = Astro.props
 
 	.container-Profesion{
 		color: var(--color);
-		height: auto;
+		height: 70px;
 		text-align: center;
 		font-size: 2.0625rem;
 		font-weight: 900;
@@ -157,9 +159,10 @@ const {color} = Astro.props
 
 	.container-Flecha{
 		display: flex;
-		justify-content: center;
-		grid-column-start: 1;
-		grid-column-end: 3;
+		flex-direction: column;
+		justify-content: flex-start;
+		flex-grow: 1;
+
 	}
 
 	.container-Flecha_button{	
@@ -196,6 +199,119 @@ const {color} = Astro.props
 		font-weight: 400;
 		line-height: 16px;
 		letter-spacing: 0.17rem;
+	}
+
+	@media (max-width: 960px) {
+		.section-principal{
+			margin-left: 14rem;
+			margin-top: 10rem;
+			padding-bottom: 34px;
+			gap: 5rem;
+		}
+
+		.container-principal{
+			flex-direction: column;
+			gap: 2rem;
+		}
+
+		.containerLeft{
+			gap: 1rem;
+		}
+
+		.container-Presentacion{
+			justify-content: center;
+			padding: 1rem;
+			gap: 2rem;
+		}
+
+		.container-Saludo p{
+			font-size: 3rem;
+			line-height: 2rem;
+		}
+
+		.container-Saludo h1{
+			font-size: 4rem;
+			line-height: 6rem;
+		}
+		.container-Profesion{
+			font-size: 4rem;
+			line-height: 5rem;
+		}
+
+		.menu-Social{
+			flex-direction: column;
+			padding-top: 5rem;
+			gap: 2rem;
+		}
+		
+		.menu-Social a{
+			padding: 1rem 2rem;
+			font-size: 2rem;
+			line-height: 1rem;
+		}
+
+		.menu-Social a img{
+			width: 3rem;
+			height: 3rem;
+		}
+
+		.container-Flecha{
+			margin-top: 1rem;
+		}
+		.container-Flecha_button{
+			height: 3.3rem;
+			width: 3.3rem;
+		}
+		.container-Flecha_button img{
+			width: 5rem;
+			height: 5rem;
+		}
+		.container-Flecha p{
+			font-size: 10px;
+			line-height: 12px;
+		}
+	}
+
+	@media (max-width: 900px) {
+		.section-principal{
+			margin-left: 2rem;
+			margin-top: 10rem;
+		}
+	}
+
+	@media (max-width: 800px) {
+		.section-principal{
+			margin-left: 2rem;
+			margin-top: 10rem;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.section-principal{
+			margin-left: 8rem;
+			margin-top: 10rem;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.section-principal{
+			margin-left: 15rem;
+			margin-top: 10rem;
+		}
+	}
+
+	@media (max-width: 400px) {
+		.section-principal{
+			margin-left: 25rem;
+			margin-top: 10rem;
+		}
+	}
+
+	@media (max-width: 200px) {
+		.section-principal{
+			margin-left: 24rem;
+			margin-top: 10rem;
+		}
 	}
 
 </style>
