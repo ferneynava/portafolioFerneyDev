@@ -19,8 +19,15 @@ const color = "#00A6FB";
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="" />
+        <meta name="theme-color" content="#00A6FB">
+		<link rel="icon" type="image/svg+xml" href="Logoicon.png" />
+        <link rel="canonical" href="https://ferneynava.com">
 		<meta name="generator" content={Astro.generator} />
+        <meta property="og:title" content={title}>
+        <meta property="og:description" content={description}>
+        <meta property="og:image" content="Porfolio.png">
+        <meta property="og:image:alt" content="Portafolio de Ferney Nava">
+        <meta property="og:type" content="website">
 		<script defer type="module" src="script/Proyecto.js"> </script>
 		<title>{title}</title>
 	</head>
@@ -42,7 +49,7 @@ const color = "#00A6FB";
         <Footer />
 	</body>
 </html>
-<style is:global>
+<style is:global define:vars={{color}}>
 	* {
 		font-family: "Onest Variable", system-ui, sans-serif;
 		box-sizing: border-box;
@@ -71,7 +78,7 @@ const color = "#00A6FB";
 	}
 
     .container-Primary h2 {
-        color:#00A6FB;
+        color:var(--color);
         font-size: 5rem;
 		font-weight: 700;
 		line-height: 6.3125rem;
@@ -82,6 +89,7 @@ const color = "#00A6FB";
         display: grid;
         grid-template-columns: repeat(2, minmax(500px, 1fr));
         justify-content: center;
+        align-items: center;
         column-gap: 11rem;
         row-gap: 4rem;
         align-self: stretch;
@@ -203,7 +211,7 @@ const color = "#00A6FB";
         padding: 0.5rem 1rem;
         border-radius:  3.125rem;
         text-decoration: none;
-        background:  #00A6FB;
+        background:  var(--color);
     }
 
     .container-Portafolio_Button a{
@@ -291,7 +299,7 @@ const color = "#00A6FB";
     @media (max-width: 500px) {
         .container-Portafolio {
             grid-template-columns: repeat(1, minmax(500px, 1fr));
-            margin-left: 13rem;
+            margin-left: 17rem;
 			margin-top: 1rem;
         }
 
@@ -314,7 +322,7 @@ const color = "#00A6FB";
         }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 400px) {
         .container-Portafolio {
             grid-template-columns: repeat(1, minmax(500px, 1fr));
             margin-left: 23rem;

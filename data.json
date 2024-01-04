@@ -42,6 +42,19 @@
             "Código": "https://github.com/ferneynava/Intro-section-with-dropdown-navigation-main.git"
         },
         {
+            "img": "Porfolio.png",
+            "nombre": "Sitio web personal",
+            "tecnologias": [
+                {"src": "HTML.svg", "alt": "HTML", "texto": "HTML"},
+                {"src": "CSS.svg", "alt": "CSS", "texto": "CSS"},
+                {"src": "JavaScript.svg", "alt": "JavaScript", "texto": "JavaScript"},
+                {"src": "astro_dark.svg", "alt": "Astro", "texto": "Astro"}
+            ],
+            "descripcion": "Sitio web personal donde podrás encontrar información sobre mi perfil profesional, habilidades y mis proyectos.",
+            "Demo": "https://ferneynava.com",
+            "Código": "https://github.com/ferneynava/portafolioFerneyDev.git"
+        },
+        {
             "img": "Informes finales.gif",
             "nombre": "Informes finales periodos académicos MauxiChia",
             "tecnologias": [

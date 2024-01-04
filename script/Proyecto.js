@@ -18,11 +18,11 @@ const $proyectosContainer = document.querySelector(".container-Portafolio");
                 </p>
             </div>
             <div class= "container-Portafolio_Button">
-                <a href="${project.Demo}" target="_blank">
+                <a href="${project.Demo}" target="_blank" rel="noopener">
                     Demo
                     <img src="external-link.svg" alt="">
                 </a>
-                <a href="${project.Código}" target="_blank">
+                <a href="${project.Código}" target="_blank" rel="noopener">
                     Código
                     <img src="external-link.svg" alt="">
                 </a>
