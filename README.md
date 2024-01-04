@@ -4,7 +4,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -114,12 +113,6 @@ Si tiene una sugerencia que mejoraría esto, bifurque el repositorio y crea una 
 
 <p align="right">(<a href="#volver-arriba">volver arriba</a>)</p>
 
-## Licencia
-
-Distribuido bajo la licencia MIT. Consulte `LICENSE.txt` para obtener más información.
-
-<p align="right">(<a href="#volver-arriba">volver arriba</a>)</p>
-
 
 ## Contacto
 
@@ -139,8 +132,6 @@ Project Link: [https://github.com/ferneynava/portafolioFerneyDev.git](https://gi
 [stars-url]: https://github.com/ferneynava/portafolioFerneyDev/stargazers
 [issues-shield]: https://img.shields.io/github/issues/ferneynava/portafolioFerneyDev.svg?style=for-the-badge
 [issues-url]: https://github.com/ferneynava/portafolioFerneyDev/issues
-[license-shield]: https://img.shields.io/github/license/ferneynava/portafolioFerneyDev.svg?style=for-the-badge
-[license-url]: https://github.com/ferneynava/portafolioFerneyDev/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/ferney-alexander-nava-trujillo-0478a8118/
 [product-screenshot]: /public/Minimalist%20Website%20Launch%20Computer%20Mockup%20Instagram%20Post.png
