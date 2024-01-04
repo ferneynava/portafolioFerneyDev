@@ -21,7 +21,7 @@
     <a href="https://github.com/ferneynava/portafolioFerneyDev.git"><strong>Explore los documentos »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">Ver demostración</a>
+    <a href="https://ferneynava.com">Ver demostración</a>
     ·
     <a href="https://github.com/ferneynava/portafolioFerneyDev/issues">Reportar error</a>
     ·
@@ -56,7 +56,7 @@
 
 ## Acerca del proyecto
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://ferneynava.com)
 
 Sitio Web personal donde podrás encontrar información sobre mi perfil profesional, mi experiencia y habilidades, así como los proyectos en los que he trabajado. 
 <p align="right">(<a href="#volver-arriba">volver arriba</a>)</p>
