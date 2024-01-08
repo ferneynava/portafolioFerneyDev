@@ -386,10 +386,10 @@ const {id, color} = Astro.props
     .container-Portafolio_Button a{
         display: flex;
         align-items: center;
-        gap: 0.5rem;
-        color: white;
+        gap: 0.4375remrem;
+        color: #000000;
         font-size: 1rem;
-        font-weight: 400;
+        font-weight: 600;
         line-height: 1.7rem;
         margin: 0;
         padding: 0.5rem 1rem;
@@ -453,7 +453,7 @@ const {id, color} = Astro.props
 
         .container-Portafolio {
             grid-template-columns: repeat(1, minmax(500px, 1fr));
-            margin-left: 14rem;
+            margin-left: 9rem;
 			margin-top: 1rem;
         }
 
@@ -478,6 +478,15 @@ const {id, color} = Astro.props
         .container-Portafolio_Button a{
             padding: 1rem 2rem;
             font-size: 1.8rem;
+        }
+    }
+
+    @media (max-width: 800px) {
+
+        .container-Portafolio {
+            grid-template-columns: repeat(1, minmax(500px, 1fr));
+            margin-left: 13rem;
+			margin-top: 1rem;
         }
     }
 

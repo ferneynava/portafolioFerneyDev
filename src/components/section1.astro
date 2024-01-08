@@ -27,7 +27,7 @@ const {color} = Astro.props
 					</li>
 					<li>
 						<a href="https://github.com/ferneynava"  target="_blank" rel="noopener noreferrer">
-							<img src="GitHub.svg" alt="GitHub">
+							<img class="Github" src="GitHub.svg" alt="GitHub">
 								GitHub
 						</a>
 					</li>
@@ -57,7 +57,7 @@ const {color} = Astro.props
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		gap: 10rem;
+		gap: 4rem;
 		margin: 115px auto 0px;
 	}
 	
@@ -79,7 +79,7 @@ const {color} = Astro.props
 		display: flex;
 		padding: 1.75rem;
 		align-items: center;
-		background: rgba(108, 117, 125, 0.55);
+		background: rgba(13, 15, 16, 0.549);
 		border-radius: 16px;
 		border: 2px solid white;
 		backdrop-filter: blur(20px);
@@ -130,7 +130,7 @@ const {color} = Astro.props
 	.menu-Social a{
 		display: flex;
 		padding: 0.5rem 1rem;
-		color: white;
+		color: #000000;
 		font-size: 1rem;
 		line-height: 1.5rem;
 		text-decoration: none;
@@ -149,6 +149,11 @@ const {color} = Astro.props
                 0 0 25px rgb(0,140,255),
                 0 0 50px rgb(0,140,255),
                 0 0 100px rgb(0,140,255);
+	}
+
+	.Github{
+		width: 24px;
+		height: 24px;
 	}
 
 	.containerRight{
@@ -287,14 +292,14 @@ const {color} = Astro.props
 
 	@media (max-width: 600px) {
 		.section-principal{
-			margin-left: 8rem;
+			margin-left: 13rem;
 			margin-top: 10rem;
 		}
 	}
 
-	@media (max-width: 600px) {
+	@media (max-width: 500px) {
 		.section-principal{
-			margin-left: 15rem;
+			margin-left: 19rem;
 			margin-top: 10rem;
 		}
 	}

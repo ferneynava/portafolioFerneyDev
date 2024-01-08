@@ -237,7 +237,26 @@ const {id, color} = Astro.props
 		
 	}
 
-	.menu-sobremi a{
+	#perfil{
+		letter-spacing: 0.05rem;
+		font-weight: 600;
+		font-size: 1.25rem;
+		color: #000000;
+		text-decoration: none;
+		padding: 0.5rem 2rem;
+	}
+
+
+	.estudios{
+		letter-spacing: 0.05rem;
+		font-weight: 600;
+		font-size: 1.25rem;
+		color: white;
+		text-decoration: none;
+		padding: 0.5rem 2rem;
+	}
+
+	.Skills {
 		letter-spacing: 0.05rem;
 		font-weight: 600;
 		font-size: 1.25rem;
@@ -256,10 +275,11 @@ const {id, color} = Astro.props
                 0 0 25px rgb(0,140,255),
                 0 0 50px rgb(0,140,255),
                 0 0 100px rgb(0,140,255);
+				
 	}
 
 	.menu-sobremi a:hover{
-        color: white;
+		color: #000000;
 		padding: 0.5rem 2rem;
 		background: var(--color);
 		border-radius: 3rem;
@@ -272,7 +292,7 @@ const {id, color} = Astro.props
     }
 
 	.click{
-		color: white;
+		color: #000000;
 		padding: 0.5rem 2rem;
 		background: var(--color);
 		border-radius: 3rem;
@@ -310,7 +330,7 @@ const {id, color} = Astro.props
 	.containerRight-buttom a{
 		display: flex;
 		padding: 0.5rem 1rem;
-		color: white;
+		color: #000000;
 		font-size: 1rem;
 		line-height: 1.5rem;
 		text-decoration: none;
@@ -446,6 +466,12 @@ const {id, color} = Astro.props
 			line-height: 1rem;
 		}
 
+		#perfil{
+			padding: 0.5rem 2rem;
+			font-size: 2rem;
+			line-height: 1rem;
+		}
+
 		.containerRight-Perfil{
 			font-size: 1.5rem;
 			line-height: 3.5rem;
@@ -574,8 +600,15 @@ const {id, color} = Astro.props
 	$hover.forEach(Element => {
 		Element.addEventListener("mouseover", function (){
 			$perfil.classList.remove("menu-sobremi_perfil");
+			$perfil.classList.remove("click");
+			$perfil.style.color = "white";
 		})
 	})
+
+	$perfil.addEventListener("mouseover", function(){
+		$perfil.style.color = "#000000";
+	})
+
 
 	$containerSkillsHover.forEach(Element => {
 		const $imagen = Element.querySelectorAll("img");
