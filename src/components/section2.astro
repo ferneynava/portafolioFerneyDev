@@ -307,7 +307,7 @@ const {id, color} = Astro.props
 	.containerRight-Perfil{
 		color: white;
 		font-size: 1rem;
-		font-weight: 600;
+		font-weight: 400;
 		line-height: 1.7rem;
 	}
 
@@ -607,6 +607,10 @@ const {id, color} = Astro.props
 
 	$perfil.addEventListener("mouseover", function(){
 		$perfil.style.color = "#000000";
+	})
+
+	$perfil.addEventListener("mouseout", function(){
+		$perfil.style.color = "white";
 	})
 
 
