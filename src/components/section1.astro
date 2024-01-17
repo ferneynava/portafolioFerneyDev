@@ -53,12 +53,11 @@ const {color} = Astro.props
 <style define:vars={{color}}>
 
 	.section-principal{
-		min-height: 100vh;
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		gap: 4rem;
-		margin: 115px auto 0px;
+		gap: 5rem;
+		margin: 185px auto 0px;
 	}
 	
 	.container-principal {
@@ -141,14 +140,14 @@ const {color} = Astro.props
 	}
 
 	.menu-Social a {
-		box-shadow: 0 0 25px rgb(0,140,255);
+		box-shadow: 0 0 25px rgb(61,198,253);
 	}
 
 	.menu-Social a:hover{
-		box-shadow: 0 0 5px rgb(0,140,255),
-                0 0 25px rgb(0,140,255),
-                0 0 50px rgb(0,140,255),
-                0 0 100px rgb(0,140,255);
+		box-shadow: 0 0 5px rgb(61,198,253),
+                0 0 25px rgb(61,198,253),
+                0 0 50px rgb(61,198,253),
+                0 0 100px rgb(61,198,253);
 	}
 
 	.Github{
@@ -182,14 +181,14 @@ const {color} = Astro.props
 	}
 
 	.container-Flecha_button{
-		box-shadow: 0 0 25px rgb(0,140,255);
+		box-shadow: 0 0 25px rgb(61,198,253);
 	}
 
 	.container-Flecha_button:hover{
-		box-shadow: 0 0 5px rgb(0,140,255),
-                0 0 25px rgb(0,140,255),
-                0 0 50px rgb(0,140,255),
-                0 0 100px rgb(0,140,255);
+		box-shadow: 0 0 5px rgb(61,198,253),
+                0 0 25px rgb(61,198,253),
+                0 0 50px rgb(61,198,253),
+                0 0 100px rgb(61,198,253);
 	}
 
 	.container-Flecha_button img{
@@ -275,7 +274,7 @@ const {color} = Astro.props
 			line-height: 12px;
 		}
 	}
-
+	
 	@media (max-width: 900px) {
 		.section-principal{
 			margin-left: 2rem;
@@ -323,7 +322,6 @@ const {color} = Astro.props
 <script>
 	import Typed from 'typed.js'; 
 	
-
 		const typed = new Typed(".typed" ,{
 			strings: ["Licenciado en electrónica","Desarrollador de Software"],
 			typeSpeed: 80,

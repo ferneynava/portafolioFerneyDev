@@ -9,7 +9,7 @@ const {id, color} = Astro.props
         </h2>
         <div class="container-Portafolio">
             <div class="container-Portafolio_Tajeta">   
-                <img class="container-Portafolio_img" src="Informes finales.gif" alt="Proyectoimg">
+                <img class="container-Portafolio_img" src="Informes finales.webp" alt="Proyectoimg">
                 <div class="container-Portafolio_Descripcion">
                     <h3>Informes finales periodos académicos MauxiChia</h3>
                     <nav>
@@ -44,7 +44,7 @@ const {id, color} = Astro.props
                 </div>
             </div>
             <div class="container-Portafolio_Tajeta">   
-                <img class="container-Portafolio_img" src="SpaceX.jpg" alt="Proyectoimg">
+                <img class="container-Portafolio_img" src="SpaceX.webp" alt="Proyectoimg">
                 <div class="container-Portafolio_Descripcion">
                     <h3>Clon de SpaceX</h3>
                     <nav>
@@ -87,7 +87,7 @@ const {id, color} = Astro.props
                 </div>
             </div>
             <div class="container-Portafolio_Tajeta">   
-                <img class="container-Portafolio_img" src="Tesla.jpg" alt="Proyectoimg">
+                <img class="container-Portafolio_img" src="Tesla.webp" alt="Proyectoimg">
                 <div class="container-Portafolio_Descripcion">
                     <h3>Clon de Tesla</h3>
                     <nav>
@@ -129,8 +129,9 @@ const {id, color} = Astro.props
                     </a>
                 </div>
             </div>
+            
             <div class="container-Portafolio_Tajeta">   
-                <img class="container-Portafolio_img" src="Clon de Minecraft.gif" alt="Proyectoimg">
+                <img class="container-Portafolio_img" src="Clon de Minecraft.webp" alt="Proyectoimg">
                 <div class="container-Portafolio_Descripcion">
                     <h3>Clon de Minecraft v1.0</h3>
                     <nav>
@@ -172,8 +173,9 @@ const {id, color} = Astro.props
                     </a>
                 </div>
             </div>
+
             <div class="container-Portafolio_Tajeta">   
-                <img class="container-Portafolio_img" src="Porfolio.png" alt="Proyectoimg">
+                <img class="container-Portafolio_img" src="Porfolio.webp" alt="Proyectoimg">
                 <div class="container-Portafolio_Descripcion">
                     <h3>Sitio web personal</h3>
                     <nav>
@@ -212,7 +214,7 @@ const {id, color} = Astro.props
                 </div>
             </div>
             <div class="container-Portafolio_Tajeta">   
-                <img class="container-Portafolio_img" src="Secciondeintroducción.jpg" alt="Proyectoimg">
+                <img class="container-Portafolio_img" src="Secciondeintroducción.webp" alt="Proyectoimg">
                 <div class="container-Portafolio_Descripcion">
                     <h3>Sección de introducción</h3>
                     <nav>
@@ -275,6 +277,7 @@ const {id, color} = Astro.props
         column-gap: 11rem;
         row-gap: 4rem;
         align-self: stretch;
+        align-items: center;
     }
 
     .container-Portafolio_Tajeta{
@@ -284,14 +287,15 @@ const {id, color} = Astro.props
         align-items: center;
         border-radius: 12px;
         background-color: #212529;
-        box-shadow: 0 0 25px rgb(0,140,255);
+        box-shadow: 0 0 25px rgb(61,198,253);
+        height: min-content;
     }
 
     .container-Portafolio_Tajeta:hover{
-        box-shadow: 0 0 5px rgb(0,140,255),
-                0 0 25px rgb(0,140,255),
-                0 0 50px rgb(0,140,255),
-                0 0 100px rgb(0,140,255);
+        box-shadow: 0 0 5px rgb(61,198,253),
+                0 0 25px rgb(61,198,253),
+                0 0 50px rgb(61,198,253),
+                0 0 100px rgb(61,198,253);
     }
 
     .container-Portafolio_img {
@@ -397,14 +401,14 @@ const {id, color} = Astro.props
     }
 
     .container-Portafolio_Button a{
-        box-shadow: 0 0 25px rgb(0,140,255);
+        box-shadow: 0 0 25px rgb(61,198,253);
     }
 
     .container-Portafolio_Button a:hover{
-        box-shadow: 0 0 5px rgb(0,140,255),
-                0 0 25px rgb(0,140,255),
-                0 0 50px rgb(0,140,255),
-                0 0 100px rgb(0,140,255);
+        box-shadow: 0 0 5px rgb(61,198,253),
+                0 0 25px rgb(61,198,253),
+                0 0 50px rgb(61,198,253),
+                0 0 100px rgb(61,198,253);
     }
 
     @media (max-width: 960px) {

@@ -24,11 +24,13 @@ const {id, color} = Astro.props
 			</nav>
 			<div class = "containerRight-Perfil">
 				<p>
-					<span id="resaltador">Licenciado en electrónica y desarrollador de Software </span> con habilidades en Front-End, una amplia experiencia en los campos de la educación y la industria tecnológica desarrollando proyectos personales.
-					Además de mi rol como profesional en desarrollo de software, también me he desempeñado como educador en tecnología, informática, matemáticas y áreas afines. 
+					<span id="resaltador">Licenciado en electrónica y desarrollador de Software </span> con una sólida formación en el ámbito tecnológico, <strong>he cultivado habilidades significativas a través de proyectos personales y profesionales innovadores.</strong> Estos proyectos demuestran mi capacidad para aplicar conocimientos técnicos en un entorno práctico y mi compromiso con la mejora continua. 
 				</p>
 				<p>
-					Me gusta estar en constante aprendizaje, creo que siempre hay algo nuevo que aprender.
+					<strong>Mi trayectoria no se limita únicamente al desarrollo de software; también he desempeñado un papel fundamental en el ámbito educativo</strong>. Como educador, he compartido mis conocimientos en tecnología, informática, matemáticas y disciplinas relacionadas, contribuyendo al crecimiento académico de mis estudiantes.
+				</p>
+				<p> 
+					Esta combinación de habilidades técnicas y experiencia educativa me ha permitido destacarme en la intersección entre la teoría y la aplicación práctica. <strong>Este sitio web es un ejemplo de mi trabajo. Aquí encontrarás información sobre mi formación académica, mis habilidades y mis proyectos.</strong> Si deseas saber más sobre mí, no dudes en contactarme.
 				</p>
 			</div>
 			<div class = "containerRight-Estudios inactive">
@@ -184,10 +186,7 @@ const {id, color} = Astro.props
 
 <style define:vars={{color}}>
     .Sobremi {
-        min-height: 100vh;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		padding: 7rem 0;
 		max-width: 1200px;
 		margin: 0px auto;
     }
@@ -271,10 +270,10 @@ const {id, color} = Astro.props
 		border-radius: 3rem;
 		transition: 0.5s;
         transition-property: box-shadow;
-		box-shadow: 0 0 5px rgb(0,140,255),
-                0 0 25px rgb(0,140,255),
-                0 0 50px rgb(0,140,255),
-                0 0 100px rgb(0,140,255);
+		box-shadow: 0 0 5px rgb(61,198,253),
+                0 0 25px rgb(61,198,253),
+                0 0 50px rgb(61,198,253),
+                0 0 100px rgb(61,198,253);
 				
 	}
 
@@ -285,10 +284,10 @@ const {id, color} = Astro.props
 		border-radius: 3rem;
 		transition: 0.5s;
         transition-property: box-shadow;
-		box-shadow: 0 0 5px rgb(0,140,255),
-                0 0 25px rgb(0,140,255),
-                0 0 50px rgb(0,140,255),
-                0 0 100px rgb(0,140,255);
+		box-shadow: 0 0 5px rgb(61,198,253),
+                0 0 25px rgb(61,198,253),
+                0 0 50px rgb(61,198,253),
+                0 0 100px rgb(61,198,253);
     }
 
 	.click{
@@ -298,10 +297,10 @@ const {id, color} = Astro.props
 		border-radius: 3rem;
 		transition: 0.5s;
         transition-property: box-shadow;
-		box-shadow: 0 0 5px rgb(0,140,255),
-                0 0 25px rgb(0,140,255),
-                0 0 50px rgb(0,140,255),
-                0 0 100px rgb(0,140,255);
+		box-shadow: 0 0 5px rgb(61,198,253),
+                0 0 25px rgb(61,198,253),
+                0 0 50px rgb(61,198,253),
+                0 0 100px rgb(61,198,253);
 	}
 
 	.containerRight-Perfil{
@@ -311,6 +310,9 @@ const {id, color} = Astro.props
 		line-height: 1.7rem;
 	}
 
+	strong{
+		color: var(--color);
+	}	
 	#resaltador{
 		font-weight: bold;
 	}
@@ -341,14 +343,14 @@ const {id, color} = Astro.props
 	}
 
 	.containerRight-buttom a {
-		box-shadow: 0 0 25px rgb(0,140,255);
+		box-shadow: 0 0 25px rgb(61,198,253);
 	}
 
 	.containerRight-buttom a:hover{
-		box-shadow: 0 0 5px rgb(0,140,255),
-                0 0 25px rgb(0,140,255),
-                0 0 50px rgb(0,140,255),
-                0 0 100px rgb(0,140,255);
+		box-shadow: 0 0 5px rgb(61,198,253),
+                0 0 25px rgb(61,198,253),
+                0 0 50px rgb(61,198,253),
+                0 0 100px rgb(61,198,253);
 	}
 
 	.inactive {
@@ -630,7 +632,7 @@ const {id, color} = Astro.props
 })
 
 	function subrayado(){
-		let subrayado = annotate($subrayado, { type: 'underline', color: "#00A6FB", strokeWidth: 3 ,padding: 2});
+		let subrayado = annotate($subrayado, { type: 'underline', color: "#3dc6fd", strokeWidth: 3 ,padding: 2});
 		subrayado.show();
 		setTimeout(() => {
 			subrayado.remove();
