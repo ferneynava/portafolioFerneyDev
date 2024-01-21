@@ -4,9 +4,6 @@ const {id, color} = Astro.props
 
 <section id={id} class="Sobremi">
     <div class="container-Sobremi">
-		<div class="containerLeft">
-			<img src="FotoSobremi.webp" alt="Ferney Nava">
-		</div>
 		<div class="containerRight">
 			<h2>Sobre mi.</h2>
 			<nav>
@@ -15,10 +12,10 @@ const {id, color} = Astro.props
 						<a id="perfil" class="menu-sobremi_perfil" href="#sobre-mi">Perfil</a>
 					</li>
 					<li>
-						<a class="hover estudios " href="#sobre-mi">Estudios</a>
+						<a class="estudios " href="#sobre-mi">Estudios</a>
 					</li>
 					<li>
-						<a class="hover Skills" href="#sobre-mi">Skills</a>
+						<a class="Skills" href="#sobre-mi">Skills</a>
 					</li>
 				</ul>
 			</nav>
@@ -181,26 +178,32 @@ const {id, color} = Astro.props
 				</a>
 			</div>
 		</div>
+		<div class="containerLeft">
+			<img src="FotoSobremi.webp" alt="Ferney Nava">
+		</div>
+		
     </div>
 </section>
 
 <style define:vars={{color}}>
-    .Sobremi {
-		padding: 3rem 0;
-		max-width: 1200px;
-		margin: 0px auto;
-    }
+	.Sobremi{	
+		padding-block: 3rem;
+		position: relative;
+	}
 
     .container-Sobremi {
 		display: grid;
-		grid-template-columns: repeat(2, minmax(500px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 		align-items: center;
-		gap: 4.375rem;
+		gap: 1rem;
+		max-width: 1200px;
+		margin: 0px auto;
 	}
 	
 	.containerLeft {
 		display: flex;
 		justify-content: center;
+		padding: 0px 33px;
 	}
 
 	.containerLeft img {
@@ -218,11 +221,12 @@ const {id, color} = Astro.props
 	}
 
 	.containerRight h2{
-		color: var(--color);
+		color: #087EC4;
 		font-size: 5rem;
 		font-weight: 700;
 		line-height: 6.3125rem;
 		margin: 0;
+		padding: 0px 33px;
 	}
 
 	.menu-sobremi{
@@ -230,21 +234,11 @@ const {id, color} = Astro.props
 		list-style: none;
 		align-items: center;
 		flex-wrap: wrap;
-		gap: 2rem;
-		padding: 0;
+		gap: 1rem;
+		padding: 0px 33px;
 		margin: 0
 		
 	}
-
-	#perfil{
-		letter-spacing: 0.05rem;
-		font-weight: 600;
-		font-size: 1.25rem;
-		color: #000000;
-		text-decoration: none;
-		padding: 0.5rem 2rem;
-	}
-
 
 	.estudios{
 		letter-spacing: 0.05rem;
@@ -253,6 +247,10 @@ const {id, color} = Astro.props
 		color: white;
 		text-decoration: none;
 		padding: 0.5rem 2rem;
+		background: #171F26;
+		border-radius: 3rem;
+		transition: 0.5s;
+        transition-property: box-shadow;
 	}
 
 	.Skills {
@@ -262,57 +260,47 @@ const {id, color} = Astro.props
 		color: white;
 		text-decoration: none;
 		padding: 0.5rem 2rem;
+		background: #171F26;
+		border-radius: 3rem;
+		transition: 0.5s;
+        transition-property: box-shadow;
 	}
 
 	.menu-sobremi_perfil{
 		padding: 0.5rem 2rem;
-		background: var(--color);
+		background: #171F26;
 		border-radius: 3rem;
 		transition: 0.5s;
         transition-property: box-shadow;
-		box-shadow: 0 0 5px rgb(61,198,253),
-                0 0 25px rgb(61,198,253),
-                0 0 50px rgb(61,198,253),
-                0 0 100px rgb(61,198,253);
-				
+		letter-spacing: 0.05rem;
+		font-weight: 600;
+		font-size: 1.25rem;
+		color: white;
+		text-decoration: none;
+		border: #087EC4 solid 2px;		
 	}
 
 	.menu-sobremi a:hover{
-		color: #000000;
+		color: white;
 		padding: 0.5rem 2rem;
-		background: var(--color);
+		background: #087EC4;
 		border-radius: 3rem;
 		transition: 0.5s;
         transition-property: box-shadow;
-		box-shadow: 0 0 5px rgb(61,198,253),
-                0 0 25px rgb(61,198,253),
-                0 0 50px rgb(61,198,253),
-                0 0 100px rgb(61,198,253);
     }
-
-	.click{
-		color: #000000;
-		padding: 0.5rem 2rem;
-		background: var(--color);
-		border-radius: 3rem;
-		transition: 0.5s;
-        transition-property: box-shadow;
-		box-shadow: 0 0 5px rgb(61,198,253),
-                0 0 25px rgb(61,198,253),
-                0 0 50px rgb(61,198,253),
-                0 0 100px rgb(61,198,253);
-	}
 
 	.containerRight-Perfil{
 		color: white;
 		font-size: 1rem;
 		font-weight: 400;
 		line-height: 1.7rem;
+		padding: 0px 33px;
 	}
 
 	strong{
-		color: var(--color);
+		color: #087EC4;
 	}	
+
 	#resaltador{
 		font-weight: bold;
 	}
@@ -322,35 +310,27 @@ const {id, color} = Astro.props
 		gap: 1rem;
 		list-style: none;
 		letter-spacing: 0.05rem;
-		padding: 0;
+
 		align-items: center;
-		align-content: center;
 		justify-content: center;
-		flex-wrap: wrap;
+		padding: 0px 33px;
 	}
 
 	.containerRight-buttom a{
 		display: flex;
 		padding: 0.5rem 1rem;
-		color: #000000;
+		color: white;
 		font-size: 1rem;
 		line-height: 1.5rem;
 		text-decoration: none;
 		border-radius:  3.125rem;
-		background:  var(--color);
+		background:  #171F26;
 		align-items: center;
 		gap: 0.4375rem;
 	}
 
-	.containerRight-buttom a {
-		box-shadow: 0 0 25px rgb(61,198,253);
-	}
-
 	.containerRight-buttom a:hover{
-		box-shadow: 0 0 5px rgb(61,198,253),
-                0 0 25px rgb(61,198,253),
-                0 0 50px rgb(61,198,253),
-                0 0 100px rgb(61,198,253);
+		background:  #087EC4;
 	}
 
 	.inactive {
@@ -358,12 +338,11 @@ const {id, color} = Astro.props
 	}
 
 	.listado-estudios {
-
 		display: flex;
 		flex-direction: column;
 		list-style: none;
 		gap: 1rem;
-		padding: 0;
+		padding: 0px 33px;
 		margin-top: 10px;
 		color: white;
 	}
@@ -391,7 +370,7 @@ const {id, color} = Astro.props
 	}
 
 	.listado-estudios a:hover{
-		color: var(--color);
+		color: #087EC4;
 		text-decoration: underline;
 	}
 
@@ -405,10 +384,9 @@ const {id, color} = Astro.props
 	.containerRight-Skills{
 		height: auto;
 		width: 100%;
-		display: none;
-		grid-template-columns: repeat(4, minmax(100px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 		gap: 2rem;
-		padding: 0;
+		padding: 0px 33px;
 		margin: 1rem 0;
 	}
 
@@ -419,7 +397,7 @@ const {id, color} = Astro.props
 		padding: 1.3125rem;
 		align-items: center;
 		gap: 0.5rem;
-		background-color: #343A40;
+		background-color: #171F26;
 		border-radius: 0.625rem;
 	}
 
@@ -437,107 +415,18 @@ const {id, color} = Astro.props
 	}
 
 	.containerRight-Skills_hover:hover{
-		box-shadow: 0 0 5px rgb(255, 255, 255),
-                0 0 25px rgb(255, 255, 255),
-                0 0 50px rgb(255, 255, 255),
-                0 0 15px rgb(255, 255, 255);
+		box-shadow: 0 0 4px rgb(255, 255, 255),
+                0 0 10px rgb(255, 255, 255),
+                0 0 10px rgb(255, 255, 255),
+                0 0 10px rgb(255, 255, 255);
 		
 	}
-
-	@media (max-width: 960px){
-		.Sobremi{
-			margin-left: 20px;
-			padding-top: 8rem;
-			min-width: 44rem;
-		}
-
-		.container-Sobremi{
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			gap: 2rem;
-		}
-
-		.menu-sobremi{
-			gap: 1rem;
-		}
-
-		.menu-sobremi a{
-			padding: 1rem 2rem;
-			font-size: 2rem;
-			line-height: 1rem;
-		}
-
-		#perfil{
-			padding: 0.5rem 2rem;
-			font-size: 2rem;
-			line-height: 1rem;
-		}
-
-		.containerRight-Perfil{
-			font-size: 1.5rem;
-			line-height: 3.5rem;
-		}	
-		.listado-estudios{
-			font-size: 1.5rem;
-			line-height: 3.5rem;
-		}
-		
-		.listado-estudios img{
-			width: 3.5rem;
-			height: auto;
-			object-fit: contain;
-		}
-
-
-		.listado-estudios small{
-			font-size: 1.4rem;
-			line-height: 3.5rem;
-		} 
-		
-		.containerRight-Skills h2{
-			font-size: 1.5rem;
-			line-height: 3.5rem;
-		}
-		
-		.containerRight-buttom a{
-			padding: 1rem 2rem;
-			font-size: 2rem;
-			line-height: 3.5rem;
-		}
-
-		.containerRight-buttom a img{
-			width: 3.0rem;
-			height: auto;
-			object-fit: contain;
-		}
-	}
-
-
-	@media (max-width: 417px) {
-		.Sobremi{
-			margin-left: 15px;
-			padding-top: 10rem;
-			min-width: 46rem;
-		}
-
-		.containerRight-Perfil{
-			font-size: 1.7rem;
-			line-height: 3.5rem;
-		}
-
-		.containerRight-buttom{
-			gap: 4rem
-		}
-		}
-
 
 </style>
 
 <script type="module">
 	import {annotate} from "https://unpkg.com/rough-notation?module";
 	
-	const $hover  = document.querySelectorAll(".hover");
 	const $perfil = document.getElementById("perfil");
 	const $containerPerfil = document.querySelector(".containerRight-Perfil");
 	const $estudios = document.querySelector(".estudios");
@@ -599,22 +488,6 @@ const {id, color} = Astro.props
 		$containerSkills.style.display = "grid";
 	})
 
-	$hover.forEach(Element => {
-		Element.addEventListener("mouseover", function (){
-			$perfil.classList.remove("menu-sobremi_perfil");
-			$perfil.classList.remove("click");
-			$perfil.style.color = "white";
-		})
-	})
-
-	$perfil.addEventListener("mouseover", function(){
-		$perfil.style.color = "#000000";
-	})
-
-	$perfil.addEventListener("mouseout", function(){
-		$perfil.style.color = "white";
-	})
-
 
 	$containerSkillsHover.forEach(Element => {
 		const $imagen = Element.querySelectorAll("img");
@@ -632,7 +505,7 @@ const {id, color} = Astro.props
 })
 
 	function subrayado(){
-		let subrayado = annotate($subrayado, { type: 'underline', color: "#3dc6fd", strokeWidth: 3 ,padding: 2});
+		let subrayado = annotate($subrayado, { type: 'underline', color: "#087EC4", strokeWidth: 3 ,padding: 2});
 		subrayado.show();
 		setTimeout(() => {
 			subrayado.remove();

@@ -67,7 +67,6 @@ const {color} = Astro.props
         top: 0px;
         left: 0px;
         right: 0px;
-        background: rgba(255, 255, 255, 0.01);
         backdrop-filter: blur(10px);
         box-shadow: rgba(0, 0, 0, 0.01) 0px 0px 10px;
         z-index: 1000;
@@ -76,6 +75,7 @@ const {color} = Astro.props
     .Header {
         max-width: 1200px;
         margin: 0px auto;
+        padding: 0px 30px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -115,7 +115,7 @@ const {color} = Astro.props
 
     
     .Menu_Item a:hover{
-        color: var(--color);
+        color: #087EC4;
     }
     
     .Menu-Item_a::after{
@@ -125,7 +125,7 @@ const {color} = Astro.props
         height: 2px;
         bottom: 0;
         left: 0;
-        background-color: var(--color);
+        background-color: #087EC4;
         transform: scaleX(0);
         transform-origin: bottom right;
         transition: transform 0.6s ease-out;
@@ -140,10 +140,10 @@ const {color} = Astro.props
         display: inline-flex;
         font-weight: 600;
         font-size: inherit;
-        background: var(--color);;
+        background: #171F26;
         padding: 0.5rem 2rem;
         font-size: inherit;
-        color: #000000;
+        color: white;
         text-decoration: none;
         border-radius: 3rem;
         letter-spacing: 0.05rem;
@@ -151,15 +151,8 @@ const {color} = Astro.props
         transition-property: box-shadow;
     }
 
-    .Menu-Item_Button{
-        box-shadow: 0 0 25px rgb(61,198,253);
-    }
-
     .Menu-Item_Button:hover{
-        box-shadow: 0 0 5px rgb(61,198,253),
-                0 0 25px rgb(61,198,253),
-                0 0 50px rgb(61,198,253),
-                0 0 100px rgb(61,198,253);
+        background:  #087EC4;
     }
 
     .inactive {
@@ -211,11 +204,11 @@ const {color} = Astro.props
         font-weight: 600;
         letter-spacing: 0.05rem;
         text-decoration: underline;
-        text-decoration-color: var(--color);;
+        text-decoration-color: #087EC4;
     }
 
 
-    @media (max-width: 960px){
+    @media  screen and (max-width: 768px){
         .Menu-container{
             display: none;
         }
@@ -225,28 +218,23 @@ const {color} = Astro.props
         }
 
         .Logo{
-            height: 20rem;
-            width: 20rem;
+            height: 15rem;
+            width: 15rem;
         }
 
         .Menu-Movil img{
-            height: 5rem;
-            width: 5rem;
+            height: 3rem;
+            width: 3rem;
         }
 
         .Header{
-            padding: 0px 3rem;
-            height: 100px;
+            padding: 0px 33px;
         }
 
         .Menu-Item_Button{
             font-weight: 600;
             font-size: 2rem;
             padding: 1rem 2rem;
-        }
-
-        .container-footer{
-            padding: 0px 9rem;
         }
     }
 

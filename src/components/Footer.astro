@@ -29,11 +29,11 @@ const {color} = Astro.props
 <style define:vars={{color}}> 
 
 .container-footer {
+    position: relative;
+    padding-block: 3rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0px auto;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -92,9 +92,9 @@ li {
     display: inline-flex;
     font-weight: 600;
     font-size: inherit;
-    background: var(--color);
+    background: #171F26;
     padding: 0.5rem 2rem;
-    color: #000000;
+    color: white;
     text-decoration: none;
     border-radius: 3rem;
     letter-spacing: 0.05rem;
@@ -102,80 +102,24 @@ li {
     transition-property: box-shadow;
 }
 
-.Menu-Item_contacto{
-    box-shadow: 0 0 25px rgb(61,198,253);
-}
-
 .Menu-Item_contacto:hover{
-    box-shadow: 0 0 5px rgb(61,198,253),
-                0 0 25px rgb(61,198,253),
-                0 0 50px rgb(61,198,253),
-                0 0 100px rgb(61,198,253);
+    background:  #087EC4;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .container-footer {
         flex-direction: column;
-        justify-content: center;
+        margin: 0px 15rem;
         align-items: center;
-        margin-left: 17rem;
     }
-
     .MenuFooter {
         margin-top: 2rem;
+        text-align: center;
         justify-content: center;
     }
-
-    .container-footer img{
-        height: 12rem;
-        width: 12rem;
+    .Menu_Item-Sobremi {
+        margin-bottom: 1rem;
     }
-
-    .container-footer p{
-        font-size: 1.3rem;
-    }
-
-    .Menu_Item-Sobremi a{
-        font-weight: 600;
-        font-size: 1.3rem;
-    }
-
-    .Menu-Item_contacto{
-        font-weight: 600;
-        font-size: 1.8rem;
-        padding: 1rem 2rem;
-        letter-spacing: 0.05rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .container-footer {
-        margin-left: 10rem;
-    }
-}
-
-@media (max-width: 400px){
-    .container-footer {
-        margin-left: 13rem;
-    }
-
-    .container-footer img{
-        height: 24rem;
-        width: 24rem;
-    }
-
-    .container-footer p{
-        text-align: center;
-        font-size: 2.1rem;
-    }
-
-    .Menu_Item-Sobremi a{
-        font-weight: 600;
-        font-size: 2.1rem;
-    }
-
-    .Menu_Item-a {
-        margin-left: 2rem;
-    }
+    
 }
 </style>

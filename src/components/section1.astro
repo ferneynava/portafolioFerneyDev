@@ -43,28 +43,23 @@ const {color} = Astro.props
 			<img src="FotoFull.webp" alt="Foto FerneynavaDev">
 		</div>	
 	</div>
-    <div class="container-Flecha">
-		<a class="container-Flecha_button" href="#sobre-mi">
-			<img src="Flecha.svg" alt="Flecha abajo">
-		</a >
-	</div>
 </section>
 
 <style define:vars={{color}}>
 
 	.section-principal{
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		gap: 10rem;
-		margin: 96px auto 96px;
+		padding-top: 10rem;
+		padding-bottom: 8rem;
+		position: relative;
 	}
 	
 	.container-principal {
-		display: flex;
-		flex-direction: row-reverse;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 		align-items: center;
-		gap: 5.5rem;
+		gap: 1rem;
+		max-width: 1200px;
+		margin: 0px auto;
 	}
 	
 	.containerLeft{
@@ -72,13 +67,15 @@ const {color} = Astro.props
 		flex-direction: column;
 		align-items: center;
 		gap: 1rem;
+		padding: 0px 33px;
 	}	
 
 	.container-Presentacion{
 		display: flex;
 		padding: 1.75rem;
 		align-items: center;
-		background: rgba(13, 15, 16, 0.549);
+		justify-content: center;
+		background: #171F26;
 		border-radius: 16px;
 		border: 2px solid white;
 		backdrop-filter: blur(20px);
@@ -94,11 +91,11 @@ const {color} = Astro.props
 	}
 
 	.container-Saludo span{
-		color: var(--color);
+		color: #087EC4;
 	}
 
 	.container-Saludo h1{
-		color: var(--color);
+		color: #087EC4;
 		font-size: 3.125rem;
 		font-weight: 900;
 		line-height: 4.875rem;
@@ -106,12 +103,15 @@ const {color} = Astro.props
 	}
 
 	.container-Profesion{
-		color: var(--color);
+		color: #087EC4;
 		height: 70px;
-		text-align: center;
 		font-size: 2.0625rem;
 		font-weight: 900;
 		line-height: 2.5rem;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.menu-Social{
@@ -129,25 +129,19 @@ const {color} = Astro.props
 	.menu-Social a{
 		display: flex;
 		padding: 0.5rem 1rem;
-		color: #000000;
+		color: white;
 		font-size: 1rem;
 		line-height: 1.5rem;
 		text-decoration: none;
 		border-radius:  3.125rem;
-		background:  var(--color);
+		background:  #171F26;
 		align-items: center;
 		gap: 0.4375rem;
 	}
 
-	.menu-Social a {
-		box-shadow: 0 0 25px rgb(61,198,253);
-	}
 
 	.menu-Social a:hover{
-		box-shadow: 0 0 5px rgb(61,198,253),
-                0 0 25px rgb(61,198,253),
-                0 0 50px rgb(61,198,253),
-                0 0 100px rgb(61,198,253);
+		background:  #087EC4;
 	}
 
 	.Github{
@@ -158,6 +152,7 @@ const {color} = Astro.props
 	.containerRight{
 		display: flex;
 		justify-content: center;
+		padding: 0px 33px;
 	}
 
 	.container-Flecha{
@@ -172,7 +167,6 @@ const {color} = Astro.props
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: transparent;
 		border: none;
 		border-radius: 50%;
 		cursor: pointer;
@@ -180,15 +174,12 @@ const {color} = Astro.props
 		width: 3.3rem;
 	}
 
-	.container-Flecha_button{
-		box-shadow: 0 0 25px rgb(61,198,253);
-	}
 
 	.container-Flecha_button:hover{
-		box-shadow: 0 0 5px rgb(61,198,253),
-                0 0 25px rgb(61,198,253),
-                0 0 50px rgb(61,198,253),
-                0 0 100px rgb(61,198,253);
+		box-shadow: 0 0 4px #087EC4,
+                0 0 10px #087EC4,
+                0 0 10px #087EC4,
+                0 0 10px #087EC4;
 	}
 
 	.container-Flecha_button img{
@@ -202,119 +193,6 @@ const {color} = Astro.props
 		font-weight: 400;
 		line-height: 16px;
 		letter-spacing: 0.17rem;
-	}
-
-	@media (max-width: 960px) {
-		.section-principal{
-			margin-left: 14rem;
-			margin-top: 10rem;
-			padding-bottom: 34px;
-			gap: 5rem;
-		}
-
-		.container-principal{
-			flex-direction: column;
-			gap: 2rem;
-		}
-
-		.containerLeft{
-			gap: 1rem;
-		}
-
-		.container-Presentacion{
-			justify-content: center;
-			padding: 1rem;
-			gap: 2rem;
-		}
-
-		.container-Saludo p{
-			font-size: 3rem;
-			line-height: 2rem;
-		}
-
-		.container-Saludo h1{
-			font-size: 4rem;
-			line-height: 6rem;
-		}
-		.container-Profesion{
-			font-size: 4rem;
-			line-height: 5rem;
-		}
-
-		.menu-Social{
-			flex-direction: column;
-			padding-top: 5rem;
-			gap: 2rem;
-		}
-		
-		.menu-Social a{
-			padding: 1rem 2rem;
-			font-size: 2rem;
-			line-height: 1rem;
-		}
-
-		.menu-Social a img{
-			width: 3rem;
-			height: 3rem;
-		}
-
-		.container-Flecha{
-			margin-top: 1rem;
-		}
-		.container-Flecha_button{
-			height: 3.3rem;
-			width: 3.3rem;
-		}
-		.container-Flecha_button img{
-			width: 5rem;
-			height: 5rem;
-		}
-		.container-Flecha p{
-			font-size: 10px;
-			line-height: 12px;
-		}
-	}
-	
-	@media (max-width: 900px) {
-		.section-principal{
-			margin-left: 2rem;
-			margin-top: 10rem;
-		}
-	}
-
-	@media (max-width: 800px) {
-		.section-principal{
-			margin-left: 2rem;
-			margin-top: 10rem;
-		}
-	}
-
-	@media (max-width: 600px) {
-		.section-principal{
-			margin-left: 13rem;
-			margin-top: 10rem;
-		}
-	}
-
-	@media (max-width: 500px) {
-		.section-principal{
-			margin-left: 19rem;
-			margin-top: 10rem;
-		}
-	}
-
-	@media (max-width: 400px) {
-		.section-principal{
-			margin-left: 25rem;
-			margin-top: 10rem;
-		}
-	}
-
-	@media (max-width: 200px) {
-		.section-principal{
-			margin-left: 24rem;
-			margin-top: 10rem;
-		}
 	}
 
 </style>

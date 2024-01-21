@@ -175,45 +175,6 @@ const {id, color} = Astro.props
             </div>
 
             <div class="container-Portafolio_Tajeta">   
-                <img class="container-Portafolio_img" src="Porfolio.webp" alt="Proyectoimg">
-                <div class="container-Portafolio_Descripcion">
-                    <h3>Sitio web personal</h3>
-                    <nav>
-                        <ul class="menu-tecnologias">
-                            <li>
-                                <img src="HTML.svg" alt="HTML">
-                                <p>HTML</p>
-                            </li>
-                            <li>
-                                <img src="CSS.svg" alt="CSS">
-                                <p>CSS</p>
-                            </li>
-                            <li>
-                                <img src="JavaScript.svg" alt="JavaScript">
-                                <p>JavaScript</p>
-                            </li>
-                            <li>
-                                <img src="astro_dark.svg" alt="Astro">
-                                <p>Astro</p>
-                            </li>
-                        </ul>
-                    </nav>
-                    <p class="container-Portafolio_p">
-                        Sitio web personal donde podrás encontrar información sobre mi perfil profesional, habilidades y mis proyectos.
-                    </p>
-                </div>
-                <div class= "container-Portafolio_Button">
-                    <a href="https://ferneynava.com" target="_blank" rel="noopener">
-                        Demo
-                        <img src="external-link.svg" alt="">
-                    </a>
-                    <a href="https://github.com/ferneynava/portafolioFerneyDev.git" target="_blank" rel="noopener">
-                        Código
-                        <img src="external-link.svg" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="container-Portafolio_Tajeta">   
                 <img class="container-Portafolio_img" src="Secciondeintroducción.webp" alt="Proyectoimg">
                 <div class="container-Portafolio_Descripcion">
                     <h3>Sección de introducción</h3>
@@ -253,53 +214,47 @@ const {id, color} = Astro.props
 </section>    
 
 <style define:vars={{color}}>
+
+    .Portafolio{
+        padding-block: 3rem;
+		position: relative;
+    }
+
     .container-Primary{
 		max-width: 1200px;
-		margin: 0rem auto;
+		margin: 0px auto;
 		display: flex;
 		flex-direction: column;
 		gap: 9px;
-        padding-top: 3rem;
+        margin: 0px auto;
 	}
 
     .container-Primary h2 {
-        color:var(--color);
+        color:#087EC4;
         font-size: 5rem;
 		font-weight: 700;
 		line-height: 6.3125rem;
 		margin: 0;
+        padding: 0px 33px;
     }
 	
     .container-Portafolio {
         display: grid;
-        grid-template-columns: repeat(2, minmax(500px, 1fr));
-        justify-content: center;
-        column-gap: 11rem;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
         row-gap: 4rem;
         align-self: stretch;
         align-items: center;
     }
 
     .container-Portafolio_Tajeta{
-        width: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         border-radius: 12px;
-        background-color: #212529;
-        box-shadow: 0 0 25px rgb(61,198,253);
-        height: min-content;
-    }
-
-    .container-Portafolio_Tajeta:hover{
-        box-shadow: 0 0 5px rgb(61,198,253),
-                0 0 25px rgb(61,198,253),
-                0 0 50px rgb(61,198,253),
-                0 0 100px rgb(61,198,253);
+        padding: 0px 33px;
     }
 
     .container-Portafolio_img {
-        height: 20rem;
         border-radius: 12px 12px 0rem 0rem;
         justify-content: flex-end;
         align-items: center;
@@ -314,7 +269,7 @@ const {id, color} = Astro.props
         align-items: flex-start;
         gap: 2px;
         align-self: stretch;
-        
+        background-color: #171F26;
     }	
 
     .container-Portafolio_Descripcion h3 {
@@ -383,13 +338,15 @@ const {id, color} = Astro.props
         flex-wrap: wrap;
         border-top: 1px solid #6C757D;
         width: 100%;
+        background-color: #171F26;
+        border-radius: 0rem 0rem 12px 12px;
     }
 
     .container-Portafolio_Button a{
         display: flex;
         align-items: center;
         gap: 0.4375remrem;
-        color: #000000;
+        color: white;
         font-size: 1rem;
         font-weight: 600;
         line-height: 1.7rem;
@@ -397,132 +354,19 @@ const {id, color} = Astro.props
         padding: 0.5rem 1rem;
         border-radius:  3.125rem;
         text-decoration: none;
-        background:  var(--color);
+        background: #087EC4;
     }
 
     .container-Portafolio_Button a{
-        box-shadow: 0 0 25px rgb(61,198,253);
+        box-shadow: 0 0 10px #087EC4;
     }
 
     .container-Portafolio_Button a:hover{
-        box-shadow: 0 0 5px rgb(61,198,253),
-                0 0 25px rgb(61,198,253),
-                0 0 50px rgb(61,198,253),
-                0 0 100px rgb(61,198,253);
-    }
-
-    @media (max-width: 960px) {
-        
-        .container-Portafolio {
-            grid-template-columns: repeat(1, minmax(600px, 1fr));
-            justify-items: center;
-            row-gap: 4rem;
-			margin-top: 1rem;
-            margin-left: 1px;
-
-        }
-
-        .container-Primary h2{
-            margin-top: 4rem;
-            margin-left: 2rem;
-        }
-
-        .container-Portafolio_Descripcion h3{
-            font-size: 2rem;
-        }
-
-        .menu-tecnologias p{
-            font-size: 1.5rem;
-        }
-
-        .container-Portafolio_p{
-            font-size: 1.5rem;
-        }
-
-        .container-Portafolio_Button a{
-            padding: 1rem 2rem;
-            font-size: 1.8rem;
-        }
-
-        .container-Portafolio_Button a img{
-            width: 2rem;
-            height: 2rem;
-        }
+        box-shadow: 0 0 4px #087EC4,
+                0 0 10px #087EC4,
+                0 0 10px #087EC4,
+                0 0 10px #087EC4;
     }
 
 
-    @media (max-width: 800px) {
-
-        .container-Portafolio {
-            grid-template-columns: repeat(1, minmax(500px, 1fr));
-            margin-left: 9rem;
-			margin-top: 1rem;
-        }
-
-        .container-Primary h2{
-            margin-top: 3rem;
-            margin-left: 2rem;
-        }
-
-        .container-Portafolio_Descripcion h3{
-            font-size: 2rem;
-        }
-
-        .menu-tecnologias p{
-            font-size: 1.5rem;
-        }
-
-        .container-Portafolio_p{
-            font-size: 1.5rem;
-            line-height: 2.5rem;
-        }
-
-        .container-Portafolio_Button a{
-            padding: 1rem 2rem;
-            font-size: 1.8rem;
-        }
-    }
-
-    @media (max-width: 800px) {
-
-        .container-Portafolio {
-            grid-template-columns: repeat(1, minmax(500px, 1fr));
-            margin-left: 13rem;
-			margin-top: 1rem;
-        }
-    }
-
-    @media (max-width: 500px) {
-        .container-Portafolio {
-            grid-template-columns: repeat(1, minmax(500px, 1fr));
-            margin-left: 17rem;
-			margin-top: 1rem;
-        }
-
-        .container-Portafolio_Descripcion h3{
-            font-size: 2rem;
-        }
-
-        .menu-tecnologias p{
-            font-size: 1.8rem;
-        }
-
-        .container-Portafolio_p{
-            font-size: 1.8rem;
-            line-height: 2.5rem;
-        }
-
-        .container-Portafolio_Button a{
-            padding: 1rem 2rem;
-            font-size: 1.8rem;
-        }
-    }
-
-    @media (max-width: 400px) {
-        .container-Portafolio {
-            grid-template-columns: repeat(1, minmax(500px, 1fr));
-            margin-left: 23rem;
-			margin-top: 1rem;
-        }
-    }
 </style>
