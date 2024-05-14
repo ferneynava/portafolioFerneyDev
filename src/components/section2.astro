@@ -21,13 +21,13 @@ const {id, color} = Astro.props
 			</nav>
 			<div class = "containerRight-Perfil">
 				<p>
-					<span id="resaltador">Licenciado en electrónica y desarrollador de Software </span> con una sólida formación en el ámbito tecnológico, <strong>he cultivado habilidades significativas a través de proyectos personales y profesionales innovadores.</strong> Estos proyectos demuestran mi capacidad para aplicar conocimientos técnicos en un entorno práctico y mi compromiso con la mejora continua. 
+					<span id="resaltador">Licenciado en electrónica y desarrollador de Software </span> con una sólida formación en el ámbito tecnológico, <strong>he cultivado habilidades significativas y experiencias a través de proyectos personales y profesionales innovadores.</strong> Estos proyectos no solo demuestran mi capacidad para aplicar conocimientos técnicos en un entorno práctico, sino también mi compromiso con la mejora continua. 
 				</p>
 				<p>
 					<strong>Mi trayectoria no se limita únicamente al desarrollo de software; también he desempeñado un papel fundamental en el ámbito educativo</strong>. Como educador, he compartido mis conocimientos en tecnología, informática, matemáticas y disciplinas relacionadas, contribuyendo al crecimiento académico de mis estudiantes.
 				</p>
 				<p> 
-					Esta combinación de habilidades técnicas y experiencia educativa me ha permitido destacarme en la intersección entre la teoría y la aplicación práctica. <strong>Este sitio web es un ejemplo de mi trabajo. Aquí encontrarás información sobre mi formación académica, mis habilidades y mis proyectos.</strong> Si deseas saber más sobre mí, no dudes en contactarme.
+					Esta combinación de habilidades técnicas y experiencia educativa me ha permitido destacarme en la intersección entre la teoría y la aplicación práctica. Si deseas saber más sobre mí, no dudes en contactarme.
 				</p>
 			</div>
 			<div class = "containerRight-Estudios inactive">
@@ -237,7 +237,7 @@ const {id, color} = Astro.props
 		gap: 1rem;
 		padding: 0px 33px;
 		margin: 0
-		
+		transition: all 0.8s ease;
 	}
 
 	.estudios{
@@ -249,8 +249,7 @@ const {id, color} = Astro.props
 		padding: 0.5rem 2rem;
 		background: #171F26;
 		border-radius: 3rem;
-		transition: 0.5s;
-        transition-property: box-shadow;
+		transition: all 0.8s ease;
 	}
 
 	.Skills {
@@ -262,22 +261,19 @@ const {id, color} = Astro.props
 		padding: 0.5rem 2rem;
 		background: #171F26;
 		border-radius: 3rem;
-		transition: 0.5s;
-        transition-property: box-shadow;
+		transition: all 0.8s ease;
 	}
 
 	.menu-sobremi_perfil{
 		padding: 0.5rem 2rem;
 		background: #171F26;
 		border-radius: 3rem;
-		transition: 0.5s;
-        transition-property: box-shadow;
 		letter-spacing: 0.05rem;
 		font-weight: 600;
 		font-size: 1.25rem;
 		color: white;
 		text-decoration: none;
-		border: #087EC4 solid 2px;		
+		transition: all 0.8s ease;
 	}
 
 	.menu-sobremi a:hover{
@@ -285,8 +281,7 @@ const {id, color} = Astro.props
 		padding: 0.5rem 2rem;
 		background: #087EC4;
 		border-radius: 3rem;
-		transition: 0.5s;
-        transition-property: box-shadow;
+		transition: all 0.8s ease;
     }
 
 	.containerRight-Perfil{
@@ -310,7 +305,6 @@ const {id, color} = Astro.props
 		gap: 1rem;
 		list-style: none;
 		letter-spacing: 0.05rem;
-
 		align-items: center;
 		justify-content: center;
 		padding: 0px 33px;
@@ -327,6 +321,7 @@ const {id, color} = Astro.props
 		background:  #171F26;
 		align-items: center;
 		gap: 0.4375rem;
+		transition: all 0.8s ease;
 	}
 
 	.containerRight-buttom a:hover{
@@ -367,6 +362,7 @@ const {id, color} = Astro.props
 		color: white;
 		text-decoration: none;
 		line-height: 1.7rem;
+		transition: all 0.8s ease;
 	}
 
 	.listado-estudios a:hover{
@@ -388,6 +384,7 @@ const {id, color} = Astro.props
 		gap: 2rem;
 		padding: 0px 33px;
 		margin: 1rem 0;
+		transition: all 0.8s ease;
 	}
 
 	article{
@@ -414,7 +411,12 @@ const {id, color} = Astro.props
 		object-fit: contain;
 	}
 
+	.containerRight-Skills_hover{
+		transition: all 0.8s ease;
+	}
+
 	.containerRight-Skills_hover:hover{
+		transition: all 0.8s ease;
 		box-shadow: 0 0 4px rgb(255, 255, 255),
                 0 0 10px rgb(255, 255, 255),
                 0 0 10px rgb(255, 255, 255),
@@ -428,6 +430,7 @@ const {id, color} = Astro.props
 	import {annotate} from "https://unpkg.com/rough-notation?module";
 	
 	const $perfil = document.getElementById("perfil");
+	const $perfilButton = document.querySelector(".menu-sobremi_perfil");
 	const $containerPerfil = document.querySelector(".containerRight-Perfil");
 	const $estudios = document.querySelector(".estudios");
 	const $containerEstudios = document.querySelector(".containerRight-Estudios");
@@ -437,7 +440,7 @@ const {id, color} = Astro.props
 	const $subrayado = document.querySelector("#resaltador");
 	const $containerSkillsHover = document.querySelectorAll(".containerRight-Skills_hover");
 	const $menuSobremi = document.querySelector(".menu-sobremi a")
-
+	$perfilButton.style.border = "2px solid #087EC4";
 
 	$clickSobremi.addEventListener("click", subrayado);
 	const observerOption = {
@@ -465,6 +468,9 @@ const {id, color} = Astro.props
 		$containerEstudios.classList.add("inactive");
 		$containerSkills.classList.add("inactive");
 		$containerSkills.style.display = "none";
+		$Skills.style.border = "";
+		$estudios.style.border = "";
+		$perfilButton.style.border = "2px solid #087EC4";
 		subrayado()
 	})
 
@@ -476,6 +482,9 @@ const {id, color} = Astro.props
 		$containerEstudios.classList.remove("inactive");
 		$containerSkills.classList.add("inactive");
 		$containerSkills.style.display = "none";
+		$perfilButton.style.border = "";
+		$Skills.style.border = "";
+		$estudios.style.border = "2px solid #087EC4";
 	})
 
 	$Skills.addEventListener("click", function (){
@@ -486,6 +495,10 @@ const {id, color} = Astro.props
 		$containerEstudios.classList.add("inactive");
 		$containerSkills.classList.remove("inactive");
 		$containerSkills.style.display = "grid";
+		$perfilButton.style.border = "";
+		$estudios.style.border = "";
+		$Skills.style.border = "2px solid #087EC4";
+
 	})
 
 
@@ -494,11 +507,13 @@ const {id, color} = Astro.props
 
 		Element.addEventListener("mouseover", function (){
 			$imagen.forEach(img => {
+				img.style.transition = "all 0.8s ease";
 				img.style.transform = "scale(1.2)";
 			})
 		})
 		Element.addEventListener("mouseout", function (){
 			$imagen.forEach(img => {
+				img.style.transition = "all 0.8s ease";
 				img.style.transform = "scale(1)";
 		});
 	})

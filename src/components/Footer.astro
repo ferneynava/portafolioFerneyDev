@@ -64,10 +64,7 @@ li {
     color: #FAFAFA;
     text-decoration: none;
     position: relative;
-}
-
-.Menu_Item-Sobremi a:hover{
-    color: var(--color);
+    transition: all 0.8s ease;
 }
 
 .Menu_Item-a::after{
@@ -80,7 +77,7 @@ li {
     background-color: var(--color);
     transform: scaleX(0);
     transform-origin: bottom right;
-    transition: transform 0.6s ease-out;    
+    transition: transform 0.8s ease-out;    
 }
 
 .Menu_Item-a:hover::after{
@@ -100,6 +97,7 @@ li {
     letter-spacing: 0.05rem;
     transition: 0.5s;
     transition-property: box-shadow;
+    transition: all 0.8s ease;
 }
 
 .Menu-Item_contacto:hover{

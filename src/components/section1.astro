@@ -48,7 +48,7 @@ const {color} = Astro.props
 <style define:vars={{color}}>
 
 	.section-principal{
-		padding-top: 10rem;
+		padding-top: 8rem;
 		padding-bottom: 8rem;
 		position: relative;
 	}
@@ -137,6 +137,7 @@ const {color} = Astro.props
 		background:  #171F26;
 		align-items: center;
 		gap: 0.4375rem;
+		transition: all 0.8s ease;
 	}
 
 
@@ -204,6 +205,9 @@ const {color} = Astro.props
 			strings: ["Licenciado en electrónica","Desarrollador de Software"],
 			typeSpeed: 80,
 			loop: true,
+			backSpeed: 50,
+			backDelay: 2900,
+
 		});
 
 
