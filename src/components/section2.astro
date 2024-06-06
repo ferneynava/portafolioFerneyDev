@@ -221,7 +221,7 @@ const {id, color} = Astro.props
 	}
 
 	.containerRight h2{
-		color: #087EC4;
+		color: #1aaaff;
 		font-size: 5rem;
 		font-weight: 700;
 		line-height: 6.3125rem;
@@ -279,7 +279,7 @@ const {id, color} = Astro.props
 	.menu-sobremi a:hover{
 		color: white;
 		padding: 0.5rem 2rem;
-		background: #087EC4;
+		background: #1aaaff;
 		border-radius: 3rem;
 		transition: all 0.8s ease;
     }
@@ -293,7 +293,7 @@ const {id, color} = Astro.props
 	}
 
 	strong{
-		color: #087EC4;
+		color: #1aaaff;
 	}	
 
 	#resaltador{
@@ -325,7 +325,7 @@ const {id, color} = Astro.props
 	}
 
 	.containerRight-buttom a:hover{
-		background:  #087EC4;
+		background:  #1aaaff;
 	}
 
 	.inactive {
@@ -366,7 +366,7 @@ const {id, color} = Astro.props
 	}
 
 	.listado-estudios a:hover{
-		color: #087EC4;
+		color: #1aaaff;
 		text-decoration: underline;
 	}
 
@@ -440,7 +440,7 @@ const {id, color} = Astro.props
 	const $subrayado = document.querySelector("#resaltador");
 	const $containerSkillsHover = document.querySelectorAll(".containerRight-Skills_hover");
 	const $menuSobremi = document.querySelector(".menu-sobremi a")
-	$perfilButton.style.border = "2px solid #087EC4";
+	$perfilButton.style.border = "2px solid #1aaaff";
 
 	$clickSobremi.addEventListener("click", subrayado);
 	const observerOption = {
@@ -470,7 +470,7 @@ const {id, color} = Astro.props
 		$containerSkills.style.display = "none";
 		$Skills.style.border = "";
 		$estudios.style.border = "";
-		$perfilButton.style.border = "2px solid #087EC4";
+		$perfilButton.style.border = "2px solid #1aaaff";
 		subrayado()
 	})
 
@@ -484,7 +484,7 @@ const {id, color} = Astro.props
 		$containerSkills.style.display = "none";
 		$perfilButton.style.border = "";
 		$Skills.style.border = "";
-		$estudios.style.border = "2px solid #087EC4";
+		$estudios.style.border = "2px solid #1aaaff";
 	})
 
 	$Skills.addEventListener("click", function (){
@@ -497,7 +497,7 @@ const {id, color} = Astro.props
 		$containerSkills.style.display = "grid";
 		$perfilButton.style.border = "";
 		$estudios.style.border = "";
-		$Skills.style.border = "2px solid #087EC4";
+		$Skills.style.border = "2px solid #1aaaff";
 
 	})
 
@@ -520,7 +520,7 @@ const {id, color} = Astro.props
 })
 
 	function subrayado(){
-		let subrayado = annotate($subrayado, { type: 'underline', color: "#087EC4", strokeWidth: 3 ,padding: 2});
+		let subrayado = annotate($subrayado, { type: 'underline', color: "#1aaaff", strokeWidth: 3 ,padding: 2});
 		subrayado.show();
 		setTimeout(() => {
 			subrayado.remove();
