@@ -9,7 +9,10 @@ const {id, color} = Astro.props
         </h2>
         <div class="container-Portafolio">
             <div class="container-Portafolio_Tajeta">   
-                <video class="container-Portafolio_img" autoplay controls loop muted src="MusicPilot.mp4" ></video>
+                <video class="container-Portafolio_img" autoplay controls loop muted>
+                    <source src="MusicPilot.webm" type="video/mp4">
+                    <source src="MusicPilot.mp4" type="video/mp4">
+                </video>
 
                 <div class="container-Portafolio_Descripcion">
                     <h3>MusicPilot</h3>
