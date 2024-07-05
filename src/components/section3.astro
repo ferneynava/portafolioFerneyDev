@@ -277,7 +277,6 @@ const {id, color} = Astro.props
 
     .container-Primary{
 		max-width: 1200px;
-		margin: 0px auto;
 		display: flex;
 		flex-direction: column;
 		gap: 9px;
@@ -296,17 +295,17 @@ const {id, color} = Astro.props
     .container-Portafolio {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-        row-gap: 4rem;
-        align-self: stretch;
-        align-items: center;
+        align-items: stretch;
+        gap: 2rem;
     }
 
     .container-Portafolio_Tajeta{
         display: flex;
         flex-direction: column;
+        justify-content:  space-between;
         align-items: center;
         border-radius: 12px;
-        padding: 0px 33px;
+        background-color: #171F26;
     }
 
     .container-Portafolio_img {
@@ -324,7 +323,6 @@ const {id, color} = Astro.props
         align-items: flex-start;
         gap: 2px;
         align-self: stretch;
-        background-color: #171F26;
     }	
 
     .container-Portafolio_Descripcion h3 {
@@ -393,7 +391,6 @@ const {id, color} = Astro.props
         flex-wrap: wrap;
         border-top: 1px solid #6C757D;
         width: 100%;
-        background-color: #171F26;
         border-radius: 0rem 0rem 12px 12px;
         
     }
